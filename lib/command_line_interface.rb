@@ -8,8 +8,10 @@ class CommandLineInteface
 
   def run
     make_classes
+    print_class_list
     #add_attributes_to_students change to add methods to classes
     #display_students
+
   end
 
   def make_classes
@@ -20,9 +22,11 @@ class CommandLineInteface
 
   def print_class_list
     counter = 0
-
-    printf(" #{counter + 1}.%40s #{counter + 2}.%40s #{counter + 3}.%40s", Class)
-
+    rows = Class.all.count/4
+    rows.ceil.times do
+      printf(" %2d.%-25s %2d.%-25s %2d.%-25s %2d.%-25s \n", counter + 1, Class.all[counter].name, counter + 2, Class.all[counter + 1].name, counter + 3, Class.all[counter + 2].name, counter + 4, Class.all[counter + 3].name)
+      counter += 4
+    end
   end
 
   def add_attributes_to_students
