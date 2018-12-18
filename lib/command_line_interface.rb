@@ -8,19 +8,18 @@ class CommandLineInteface
 
   def run
     make_classes
-    print_class_list
+    printf_class_list
     #add_attributes_to_students change to add methods to classes
     #display_students
-
+    
   end
 
   def make_classes
     class_list = Scraper.scrape_class
     Class.create_from_collection(class_list)
-
   end
 
-  def print_class_list
+  def printf_class_list
     counter = 0
     rows = Class.all.count/4
     rows.ceil.times do
