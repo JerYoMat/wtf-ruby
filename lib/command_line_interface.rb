@@ -1,20 +1,28 @@
 require_relative "../lib/scraper.rb"
-require_relative "../lib/student.rb"
+require_relative "../lib/class.rb"
 require 'nokogiri'
 require 'colorize'
-
+require 'pry'
 class CommandLineInteface
-  BASE_PATH = "./fixtures/student-site/"
+  #BASE_PATH = "./fixtures/ruby-doc-site/"
 
   def run
-    make_students
-    add_attributes_to_students
-    display_students
+    make_classes
+    #add_attributes_to_students change to add methods to classes
+    #display_students
   end
 
-  def make_students
-    students_array = Scraper.scrape_index_page(BASE_PATH + 'index.html')
-    Student.create_from_collection(students_array)
+  def make_classes
+    class_list = Scraper.scrape_class
+    Class.create_from_collection(class_list)
+
+  end
+
+  def print_class_list
+    counter = 0
+
+    printf(" #{counter + 1}.%40s #{counter + 2}.%40s #{counter + 3}.%40s", Class)
+
   end
 
   def add_attributes_to_students
