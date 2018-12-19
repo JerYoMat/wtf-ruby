@@ -18,8 +18,8 @@ class Scraper
   end
 
   def self.scrape_methods(class_instance_name)
-   method_names = []
-   method_ids = []
+   # to break up the method sections use //div [@id='at-method'] [@class='method-detail']
+   method_sections = []
    method_link = "#{@@core_path}/#{class_instance_name}.xml"
    method_page = Nokogiri::HTML(open(method_link))
      method_page.xpath("//div[@id='method-list-section']/ul/li/a").each do |method_name|
@@ -31,5 +31,10 @@ class Scraper
      return method_names
      return method_ids
   end
+
+  def self.scrape_method_code(method_name)
+
+  end
+
 
 end
