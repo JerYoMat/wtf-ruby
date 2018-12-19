@@ -11,11 +11,9 @@ class CommandLineInteface
     make_classes
     printf_class_list
     #this is where we would wait to collect user input lets assume the user selects array
-     Scraper.scrape_method_sections_from_class_page("Array")
-    #Scraper.scrape_methods("Array")
-    #add_attributes_to_students change to add methods to classes
-    #display_students
-
+     #Scraper.scrape_method_sections_from_class_page("Array")
+    Scraper.scrape_methods("Array")
+    
   end
 
   def make_classes
