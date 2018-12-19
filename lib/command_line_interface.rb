@@ -15,17 +15,29 @@ class CommandLineInteface
     selected_class = set_class("Array")
     selected_class.create_methods_for_instance_of_class
     printf_method_list(selected_class)
-
+    display_method(selected_class, "sort")
   end
 
 
   def set_method(class_instance, chosen_method_name)
     class_instance.methods.select { |m| m.name == chosen_method_name}.first
   end
-#YOU ARE HERE 
+#YOU ARE HERE
   def display_method(class_instance, chosen_method_name)
       m_to_show = set_method(class_instance, chosen_method_name)
-      m_to_show.name
+      puts 'Method: ' + m_to_show.name.colorize(:red)
+      m_to_show.headings.each do |heading|
+       printf("#{heading.colorize(:light_blue)}\n")
+      end
+      m_to_show.sample_code.each do |code|
+          line = code.colorize(:color => :white, :background => :gray)
+          printf("\t %-50s \n", line)
+
+
+      end
+
+
+
   end
 
 

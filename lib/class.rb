@@ -36,7 +36,7 @@ class Class
        new_method_of_class = Meth.new
        new_method_of_class.name = method_names[index_placeholder]
 
-       new_method_of_class.headings = content[:headings].split('click to    toggle source')
+       new_method_of_class.headings = content[:headings].split('click to toggle source')
 
        new_method_of_class.sample_code = content[:code]
 
