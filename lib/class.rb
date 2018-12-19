@@ -43,7 +43,6 @@ class Class
        @methods << new_method_of_class
        index_placeholder += 1
     end
-   binding.pry
   end
 
 end

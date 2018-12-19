@@ -14,18 +14,36 @@ class CommandLineInteface
 #The user selects the class for which they would like to view the methods.
     selected_class = set_class("Array")
     selected_class.create_methods_for_instance_of_class
+    printf_method_list(selected_class)
+
+
 
 
   end
+
+
+  def printf_method_list(selected_class)
+    counter = 0
+    rows = selected_class.methods.count/4
+    rows.ceil.times do
+      printf(" %2d.%-25s %2d.%-25s %2d.%-25s %2d.%-25s \n",
+        counter += 1, selected_class.methods[counter - 1].name,
+        counter += 1, selected_class.methods[counter - 1].name,
+        counter += 1, selected_class.methods[counter - 1].name,
+        counter += 1, selected_class.methods[counter - 1].name)
+    end
+  end
+
+
+  def set_class(user_input)
+    Class.all.select { |c| c.name == user_input}.first
+  end
+
+
 
   def make_classes
     class_list = Scraper.scrape_class
     Class.create_from_collection(class_list)
-  end
-
-  def set_class(user_input)
-    Class.all.select { |c| c.name == user_input}.first
-
   end
 
 
