@@ -5,7 +5,7 @@ require 'nokogiri'
 require 'colorize'
 require 'pry'
 class CommandLineInteface
-  #BASE_PATH = "./fixtures/ruby-doc-site/"
+
 
   def run
     make_classes
@@ -16,9 +16,16 @@ class CommandLineInteface
     selected_class.create_methods_for_instance_of_class
     printf_method_list(selected_class)
 
+  end
 
 
-
+  def set_method(class_instance, chosen_method_name)
+    class_instance.methods.select { |m| m.name == chosen_method_name}.first
+  end
+#YOU ARE HERE 
+  def display_method(class_instance, chosen_method_name)
+      m_to_show = set_method(class_instance, chosen_method_name)
+      m_to_show.name
   end
 
 
@@ -30,22 +37,17 @@ class CommandLineInteface
         counter += 1, selected_class.methods[counter - 1].name,
         counter += 1, selected_class.methods[counter - 1].name,
         counter += 1, selected_class.methods[counter - 1].name)
-
     end
   end
-
 
   def set_class(user_input)
     Class.all.select { |c| c.name == user_input}.first
   end
 
-
-
   def make_classes
     class_list = Scraper.scrape_class
     Class.create_from_collection(class_list)
   end
-
 
 
   def printf_class_list
@@ -59,7 +61,5 @@ class CommandLineInteface
         counter += 1, Class.all[counter - 1].name)
     end
   end
-
-
 
 end
