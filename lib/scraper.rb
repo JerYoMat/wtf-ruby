@@ -25,19 +25,16 @@ class Scraper
      method_page = Nokogiri::HTML(open(method_link))
        method_page.xpath("//div[@id='method-list-section']/ul/li/a").each do |method_name|
           name = method_name.text.gsub(/[:#]/,'')
-
-
           methods << name
        end
       methods
-      binding.pry
     end
 
 
 
 
 
-  def self.scrape_method_sections_from_class_page(class_name)
+  def self.scrape_method_content_from_class_page(class_name)
    # to break up the method sections use //div [@id='at-method'] [@class='method-detail']
 
    methods = []
