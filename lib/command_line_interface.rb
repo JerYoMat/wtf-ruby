@@ -15,7 +15,7 @@ class CommandLineInteface
     selected_class = set_class("Array")
     selected_class.create_methods_for_instance_of_class
     printf_method_list(selected_class)
-    display_method(selected_class, "sort")
+    display_method(selected_class, "slice")
   end
 
 
@@ -25,9 +25,11 @@ class CommandLineInteface
 #YOU ARE HERE
   def display_method(class_instance, chosen_method_name)
       m_to_show = set_method(class_instance, chosen_method_name)
-      puts 'Method: ' + m_to_show.name.colorize(:red)
+      puts ''
+      puts '  Class: ' + class_instance.name.colorize(:mode => :bold) + ' Method: ' + m_to_show.name.colorize(:color => :red, :mode => :bold)
+      printf("\t#{m_to_show.mini_description}\n")
       m_to_show.headings.each do |heading|
-       printf("#{heading.colorize(:light_blue)}\n")
+       printf("\t#{heading.colorize(:light_blue)}\n")
       end
       m_to_show.sample_code.each do |code|
           line = code.colorize(:color => :white, :background => :gray)

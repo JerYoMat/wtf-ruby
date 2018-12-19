@@ -37,7 +37,8 @@ class Class
        new_method_of_class.name = method_names[index_placeholder]
 
        new_method_of_class.headings = content[:headings].split('click to toggle source')
-
+       new_method_of_class.description = content[:full_description]       
+       new_method_of_class.mini_description = content[:mini_description]
        new_method_of_class.sample_code = content[:code]
 
        @methods << new_method_of_class
