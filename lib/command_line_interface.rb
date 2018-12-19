@@ -9,6 +9,7 @@ class CommandLineInteface
   def run
     make_classes
     printf_class_list
+  
     #add_attributes_to_students change to add methods to classes
     #display_students
 
