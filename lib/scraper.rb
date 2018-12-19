@@ -17,24 +17,45 @@ class Scraper
     class_names
   end
 
+
   def self.scrape_methods(class_instance_name)
+     # to break up the method sections use //div [@id='at-method'] [@class='method-detail']
+     methods = {}
+     method_link = "#{@@core_path}/#{class_instance_name}.xml"
+     method_page = Nokogiri::HTML(open(method_link))
+       method_page.xpath("//div[@id='method-list-section']/ul/li/a").each do |method_name|
+
+          methods[method_name.text] = method_name.attr('href')
+       end
+      methods
+      binding.pry
+    end
+
+
+
+
+
+  def self.scrape_method_sections_from_class_page(class_name)
    # to break up the method sections use //div [@id='at-method'] [@class='method-detail']
-   method_sections = []
-   method_link = "#{@@core_path}/#{class_instance_name}.xml"
+
+   methods = []
+   method_link = @@core_path+"/Array.xml"
    method_page = Nokogiri::HTML(open(method_link))
-     method_page.xpath("//div[@id='method-list-section']/ul/li/a").each do |method_name|
 
-     method_names << method_name.text
-     method_ids << method_name.attr("href")
-
+     method_page.css(".method-detail").each do |section|
+          method_hash = {}
+        #get the headings
+           #headings =section.css(".method-heading")
+          method_hash[:headings] =section.xpath("div [@class='method-heading'] / span").text
+          method_hash[:code] = section.css(".ruby").text
+          methods << method_hash
      end
-     return method_names
-     return method_ids
-  end
 
-  def self.scrape_method_code(method_name)
+      methods
 
   end
+
+
 
 
 end

@@ -7,10 +7,10 @@
   <meta name="description" content="  Class : Array  -   Ruby 2.3.1 ">
   <meta content="2018-10-18 23:55:32 -0500" http-equiv="change-date">
   <!-- rel_prefix  = ''  ENV['RDOC_FOR_WEBSITE']   = true-->
+
     
-    
-    
-  <!-- rel_prefix = '.'   asset_rel_prefix = ''  --> 
+
+  <!-- rel_prefix = '.'   asset_rel_prefix = ''  -->
   <title>Class: Array (Ruby 2.3.1) </title>
   <link rel="stylesheet" href="/css/associated.css" type="text/css">
   <!-- link rel="stylesheet" href=".css/obf.css"  -->
@@ -24,15 +24,15 @@
   <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/js/rubydoc.js" type="text/javascript" charset="utf-8"></script> 
+  <script src="/js/rubydoc.js" type="text/javascript" charset="utf-8"></script>
 
 
-   
+
 <script src="/js/highlight.min.js"></script>
-<script> 
+<script>
   hljs.tabReplace = '  ';
   hljs.initHighlightingOnLoad();
-  </script> 
+  </script>
 
   <style type="text/css">
 
@@ -41,7 +41,7 @@
       width: 100%;
       text-align: center;
    }
-   
+
    #vulns-alert #vulns a {
     color: #F99 ! important;
    }
@@ -72,9 +72,9 @@
 <!-- VERSION HEADER for 2.3.1 NOT FOUND -->
 </div> <!-- end action bar -->
  <div class="wrapper">
-  
+
    <!-- carbon17 added here 2017-09-09 -->
- 
+
    <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 <div class="bsa-cpc"></div>
 <script>
@@ -89,7 +89,7 @@
   })();
 </script>
 
- 
+
 
    <div id="metadata">
     <div id="home-metadata">
@@ -98,7 +98,7 @@
           <a href="./index.html">Home</a>
           <a href="./index.html#classes">Classes</a>
           <a href="./index.html#methods">Methods</a>
-          
+
         </h3>
       </div>
     </div>
@@ -109,346 +109,346 @@
         <div class="section-body">
           <ul id="file-metadata">
 
-          
-          
-          
-          <li class="in-file">array.c</li>      
-            
-          
-          <li class="in-file">pack.c</li>      
-            
+
+
+
+          <li class="in-file">array.c</li>
+
+
+          <li class="in-file">pack.c</li>
+
           </ul>
         </div>
       </div>
 
-      
+
     </div>
 
     <div id="class-metadata">
-      
+
       <!-- Parent Class -->
       <div id="parent-class-section" class="section">
         <h3 class="section-header">Parent</h3>
-        
+
         <p class="link"><a href="Object.html">Object</a></p>
-        
+
       </div>
-      
 
-      
 
-      
 
-      
+
+
+
+
       <!-- Method Quickref -->
       <div id="method-list-section" class="section">
         <h3 class="section-header">Methods</h3>
         <ul class="link-list">
-          
+
           <li><a href="#method-c-5B-5D">::[]</a></li>
-          
+
           <li><a href="#method-c-new">::new</a></li>
-          
+
           <li><a href="#method-c-try_convert">::try_convert</a></li>
-          
+
           <li><a href="#method-i-26">#&amp;</a></li>
-          
+
           <li><a href="#method-i-2A">#*</a></li>
-          
+
           <li><a href="#method-i-2B">#+</a></li>
-          
+
           <li><a href="#method-i-2D">#-</a></li>
-          
+
           <li><a href="#method-i-3C-3C">#&lt;&lt;</a></li>
-          
+
           <li><a href="#method-i-3C-3D-3E">#&lt;=&gt;</a></li>
-          
+
           <li><a href="#method-i-3D-3D">#==</a></li>
-          
+
           <li><a href="#method-i-5B-5D">#[]</a></li>
-          
+
           <li><a href="#method-i-5B-5D-3D">#[]=</a></li>
-          
+
           <li><a href="#method-i-any-3F">#any?</a></li>
-          
+
           <li><a href="#method-i-assoc">#assoc</a></li>
-          
+
           <li><a href="#method-i-at">#at</a></li>
-          
+
           <li><a href="#method-i-bsearch">#bsearch</a></li>
-          
+
           <li><a href="#method-i-bsearch_index">#bsearch_index</a></li>
-          
+
           <li><a href="#method-i-clear">#clear</a></li>
-          
+
           <li><a href="#method-i-collect">#collect</a></li>
-          
+
           <li><a href="#method-i-collect-21">#collect!</a></li>
-          
+
           <li><a href="#method-i-combination">#combination</a></li>
-          
+
           <li><a href="#method-i-compact">#compact</a></li>
-          
+
           <li><a href="#method-i-compact-21">#compact!</a></li>
-          
+
           <li><a href="#method-i-concat">#concat</a></li>
-          
+
           <li><a href="#method-i-count">#count</a></li>
-          
+
           <li><a href="#method-i-cycle">#cycle</a></li>
-          
+
           <li><a href="#method-i-delete">#delete</a></li>
-          
+
           <li><a href="#method-i-delete_at">#delete_at</a></li>
-          
+
           <li><a href="#method-i-delete_if">#delete_if</a></li>
-          
+
           <li><a href="#method-i-dig">#dig</a></li>
-          
+
           <li><a href="#method-i-drop">#drop</a></li>
-          
+
           <li><a href="#method-i-drop_while">#drop_while</a></li>
-          
+
           <li><a href="#method-i-each">#each</a></li>
-          
+
           <li><a href="#method-i-each_index">#each_index</a></li>
-          
+
           <li><a href="#method-i-empty-3F">#empty?</a></li>
-          
+
           <li><a href="#method-i-eql-3F">#eql?</a></li>
-          
+
           <li><a href="#method-i-fetch">#fetch</a></li>
-          
+
           <li><a href="#method-i-fill">#fill</a></li>
-          
+
           <li><a href="#method-i-find_index">#find_index</a></li>
-          
+
           <li><a href="#method-i-first">#first</a></li>
-          
+
           <li><a href="#method-i-flatten">#flatten</a></li>
-          
+
           <li><a href="#method-i-flatten-21">#flatten!</a></li>
-          
+
           <li><a href="#method-i-frozen-3F">#frozen?</a></li>
-          
+
           <li><a href="#method-i-hash">#hash</a></li>
-          
+
           <li><a href="#method-i-include-3F">#include?</a></li>
-          
+
           <li><a href="#method-i-index">#index</a></li>
-          
+
           <li><a href="#method-i-initialize_copy">#initialize_copy</a></li>
-          
+
           <li><a href="#method-i-insert">#insert</a></li>
-          
+
           <li><a href="#method-i-inspect">#inspect</a></li>
-          
+
           <li><a href="#method-i-join">#join</a></li>
-          
+
           <li><a href="#method-i-keep_if">#keep_if</a></li>
-          
+
           <li><a href="#method-i-last">#last</a></li>
-          
+
           <li><a href="#method-i-length">#length</a></li>
-          
+
           <li><a href="#method-i-map">#map</a></li>
-          
+
           <li><a href="#method-i-map-21">#map!</a></li>
-          
+
           <li><a href="#method-i-pack">#pack</a></li>
-          
+
           <li><a href="#method-i-permutation">#permutation</a></li>
-          
+
           <li><a href="#method-i-pop">#pop</a></li>
-          
+
           <li><a href="#method-i-product">#product</a></li>
-          
+
           <li><a href="#method-i-push">#push</a></li>
-          
+
           <li><a href="#method-i-rassoc">#rassoc</a></li>
-          
+
           <li><a href="#method-i-reject">#reject</a></li>
-          
+
           <li><a href="#method-i-reject-21">#reject!</a></li>
-          
+
           <li><a href="#method-i-repeated_combination">#repeated_combination</a></li>
-          
+
           <li><a href="#method-i-repeated_permutation">#repeated_permutation</a></li>
-          
+
           <li><a href="#method-i-replace">#replace</a></li>
-          
+
           <li><a href="#method-i-reverse">#reverse</a></li>
-          
+
           <li><a href="#method-i-reverse-21">#reverse!</a></li>
-          
+
           <li><a href="#method-i-reverse_each">#reverse_each</a></li>
-          
+
           <li><a href="#method-i-rindex">#rindex</a></li>
-          
+
           <li><a href="#method-i-rotate">#rotate</a></li>
-          
+
           <li><a href="#method-i-rotate-21">#rotate!</a></li>
-          
+
           <li><a href="#method-i-sample">#sample</a></li>
-          
+
           <li><a href="#method-i-select">#select</a></li>
-          
+
           <li><a href="#method-i-select-21">#select!</a></li>
-          
+
           <li><a href="#method-i-shift">#shift</a></li>
-          
+
           <li><a href="#method-i-shuffle">#shuffle</a></li>
-          
+
           <li><a href="#method-i-shuffle-21">#shuffle!</a></li>
-          
+
           <li><a href="#method-i-size">#size</a></li>
-          
+
           <li><a href="#method-i-slice">#slice</a></li>
-          
+
           <li><a href="#method-i-slice-21">#slice!</a></li>
-          
+
           <li><a href="#method-i-sort">#sort</a></li>
-          
+
           <li><a href="#method-i-sort-21">#sort!</a></li>
-          
+
           <li><a href="#method-i-sort_by-21">#sort_by!</a></li>
-          
+
           <li><a href="#method-i-take">#take</a></li>
-          
+
           <li><a href="#method-i-take_while">#take_while</a></li>
-          
+
           <li><a href="#method-i-to_a">#to_a</a></li>
-          
+
           <li><a href="#method-i-to_ary">#to_ary</a></li>
-          
+
           <li><a href="#method-i-to_h">#to_h</a></li>
-          
+
           <li><a href="#method-i-to_s">#to_s</a></li>
-          
+
           <li><a href="#method-i-transpose">#transpose</a></li>
-          
+
           <li><a href="#method-i-uniq">#uniq</a></li>
-          
+
           <li><a href="#method-i-uniq-21">#uniq!</a></li>
-          
+
           <li><a href="#method-i-unshift">#unshift</a></li>
-          
+
           <li><a href="#method-i-values_at">#values_at</a></li>
-          
+
           <li><a href="#method-i-zip">#zip</a></li>
-          
+
           <li><a href="#method-i-7C">#|</a></li>
-          
+
         </ul>
       </div>
-      
 
-      
+
+
       <!-- Included Modules -->
       <div id="includes-section" class="section">
         <h3 class="section-header">Included Modules</h3>
         <ul class="link-list">
-        
-        
+
+
           <li><a class="include" href="Enumerable.html">Enumerable</a></li>
-        
-        
+
+
         </ul>
       </div>
-      
+
     </div>
 
     <div id="project-metadata">
-      
-      
+
+
       <div id="fileindex-section" class="section project-section">
         <h3 class="section-header">Files</h3>
         <ul id="files">
-        
-          
+
+
           <li class="file"><a href="./_lib/racc/rdoc/grammar_en_rdoc.html">grammar.en.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./_test/rdoc/test_ja_rdoc.html">test.ja.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/contributing_rdoc.html">contributing.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/contributors_rdoc.html">contributors.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/dtrace_probes_rdoc.html">dtrace_probes.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/extension_ja_rdoc.html">extension.ja.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/extension_rdoc.html">extension.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/globals_rdoc.html">globals.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/keywords_rdoc.html">keywords.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/maintainers_rdoc.html">maintainers.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/marshal_rdoc.html">marshal.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/regexp_rdoc.html">regexp.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/security_rdoc.html">security.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/standard_library_rdoc.html">standard_library.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/syntax_rdoc.html">syntax.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/syntax/assignment_rdoc.html">assignment.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/syntax/calling_methods_rdoc.html">calling_methods.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/syntax/control_expressions_rdoc.html">control_expressions.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/syntax/exceptions_rdoc.html">exceptions.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/syntax/literals_rdoc.html">literals.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/syntax/methods_rdoc.html">methods.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/syntax/miscellaneous_rdoc.html">miscellaneous.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/syntax/modules_and_classes_rdoc.html">modules_and_classes.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/syntax/precedence_rdoc.html">precedence.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./doc/syntax/refinements_rdoc.html">refinements.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./sample/drb/README_ja_rdoc.html">README.ja.rdoc</a></li>
-        
-          
+
+
           <li class="file"><a href="./sample/drb/README_rdoc.html">README.rdoc</a></li>
-        
+
         </ul>
       </div>
-      
+
 
       <div id="classindex-section" class="section project-section">
         <h3 class="section-header">Class/Module Index
@@ -462,519 +462,519 @@
         </form>
 
         <ul class="link-list">
-          
-          
-          
+
+
+
           <li><a href="./ArgumentError.html">ArgumentError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Array.html">Array</a></li>
-        
-          
-          
+
+
+
           <li><a href="./BasicObject.html">BasicObject</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Bignum.html">Bignum</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Binding.html">Binding</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Class.html">Class</a></li>
-        
-          
-          
+
+
+
           <li><a href="./ClosedQueueError.html">ClosedQueueError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Comparable.html">Comparable</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Complex.html">Complex</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Complex/compatible.html">Complex::compatible</a></li>
-        
-          
-          
+
+
+
           <li><a href="./ConditionVariable.html">ConditionVariable</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Continuation.html">Continuation</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Data.html">Data</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Dir.html">Dir</a></li>
-        
-          
-          
+
+
+
           <li><a href="./ENV.html">ENV</a></li>
-        
-          
-          
+
+
+
           <li><a href="./EOFError.html">EOFError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Encoding.html">Encoding</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Encoding/CompatibilityError.html">Encoding::CompatibilityError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Encoding/Converter.html">Encoding::Converter</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Encoding/ConverterNotFoundError.html">Encoding::ConverterNotFoundError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Encoding/InvalidByteSequenceError.html">Encoding::InvalidByteSequenceError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Encoding/UndefinedConversionError.html">Encoding::UndefinedConversionError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./EncodingError.html">EncodingError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Enumerable.html">Enumerable</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Enumerator.html">Enumerator</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Enumerator/Generator.html">Enumerator::Generator</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Enumerator/Lazy.html">Enumerator::Lazy</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Enumerator/Yielder.html">Enumerator::Yielder</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Errno.html">Errno</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Exception.html">Exception</a></li>
-        
-          
-          
+
+
+
           <li><a href="./FalseClass.html">FalseClass</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Fiber.html">Fiber</a></li>
-        
-          
-          
+
+
+
           <li><a href="./FiberError.html">FiberError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./File.html">File</a></li>
-        
-          
-          
+
+
+
           <li><a href="./File/Constants.html">File::Constants</a></li>
-        
-          
-          
+
+
+
           <li><a href="./File/Stat.html">File::Stat</a></li>
-        
-          
-          
+
+
+
           <li><a href="./FileTest.html">FileTest</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Fixnum.html">Fixnum</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Float.html">Float</a></li>
-        
-          
-          
+
+
+
           <li><a href="./FloatDomainError.html">FloatDomainError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./GC.html">GC</a></li>
-        
-          
-          
+
+
+
           <li><a href="./GC/Profiler.html">GC::Profiler</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Hash.html">Hash</a></li>
-        
-          
-          
+
+
+
           <li><a href="./IO.html">IO</a></li>
-        
-          
-          
+
+
+
           <li><a href="./IO/EAGAINWaitReadable.html">IO::EAGAINWaitReadable</a></li>
-        
-          
-          
+
+
+
           <li><a href="./IO/EAGAINWaitWritable.html">IO::EAGAINWaitWritable</a></li>
-        
-          
-          
+
+
+
           <li><a href="./IO/EINPROGRESSWaitReadable.html">IO::EINPROGRESSWaitReadable</a></li>
-        
-          
-          
+
+
+
           <li><a href="./IO/EINPROGRESSWaitWritable.html">IO::EINPROGRESSWaitWritable</a></li>
-        
-          
-          
+
+
+
           <li><a href="./IO/EWOULDBLOCKWaitReadable.html">IO::EWOULDBLOCKWaitReadable</a></li>
-        
-          
-          
+
+
+
           <li><a href="./IO/EWOULDBLOCKWaitWritable.html">IO::EWOULDBLOCKWaitWritable</a></li>
-        
-          
-          
+
+
+
           <li><a href="./IO/WaitReadable.html">IO::WaitReadable</a></li>
-        
-          
-          
+
+
+
           <li><a href="./IO/WaitWritable.html">IO::WaitWritable</a></li>
-        
-          
-          
+
+
+
           <li><a href="./IOError.html">IOError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./IndexError.html">IndexError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Integer.html">Integer</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Interrupt.html">Interrupt</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Kernel.html">Kernel</a></li>
-        
-          
-          
+
+
+
           <li><a href="./KeyError.html">KeyError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./LoadError.html">LoadError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./LocalJumpError.html">LocalJumpError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Marshal.html">Marshal</a></li>
-        
-          
-          
+
+
+
           <li><a href="./MatchData.html">MatchData</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Math.html">Math</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Math/DomainError.html">Math::DomainError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Method.html">Method</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Module.html">Module</a></li>
-        
-          
-          
+
+
+
           <li><a href="./NameError.html">NameError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./NilClass.html">NilClass</a></li>
-        
-          
-          
+
+
+
           <li><a href="./NoMemoryError.html">NoMemoryError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./NoMethodError.html">NoMethodError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./NotImplementedError.html">NotImplementedError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Numeric.html">Numeric</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Object.html">Object</a></li>
-        
-          
-          
+
+
+
           <li><a href="./ObjectSpace.html">ObjectSpace</a></li>
-        
-          
-          
+
+
+
           <li><a href="./ObjectSpace/WeakMap.html">ObjectSpace::WeakMap</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Proc.html">Proc</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Process.html">Process</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Process/GID.html">Process::GID</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Process/Status.html">Process::Status</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Process/Sys.html">Process::Sys</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Process/UID.html">Process::UID</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Process/Waiter.html">Process::Waiter</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Queue.html">Queue</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Random.html">Random</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Random/Formatter.html">Random::Formatter</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Range.html">Range</a></li>
-        
-          
-          
+
+
+
           <li><a href="./RangeError.html">RangeError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Rational.html">Rational</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Rational/compatible.html">Rational::compatible</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Regexp.html">Regexp</a></li>
-        
-          
-          
+
+
+
           <li><a href="./RegexpError.html">RegexpError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./RubyVM.html">RubyVM</a></li>
-        
-          
-          
+
+
+
           <li><a href="./RubyVM/Env.html">RubyVM::Env</a></li>
-        
-          
-          
+
+
+
           <li><a href="./RubyVM/InstructionSequence.html">RubyVM::InstructionSequence</a></li>
-        
-          
-          
+
+
+
           <li><a href="./RuntimeError.html">RuntimeError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./ScriptError.html">ScriptError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./SecurityError.html">SecurityError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Signal.html">Signal</a></li>
-        
-          
-          
+
+
+
           <li><a href="./SignalException.html">SignalException</a></li>
-        
-          
-          
+
+
+
           <li><a href="./SizedQueue.html">SizedQueue</a></li>
-        
-          
-          
+
+
+
           <li><a href="./StandardError.html">StandardError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./StopIteration.html">StopIteration</a></li>
-        
-          
-          
+
+
+
           <li><a href="./String.html">String</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Struct.html">Struct</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Symbol.html">Symbol</a></li>
-        
-          
-          
+
+
+
           <li><a href="./SyntaxError.html">SyntaxError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./SystemCallError.html">SystemCallError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./SystemExit.html">SystemExit</a></li>
-        
-          
-          
+
+
+
           <li><a href="./SystemStackError.html">SystemStackError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Thread.html">Thread</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Thread/Backtrace/Location.html">Thread::Backtrace::Location</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Thread/Mutex.html">Thread::Mutex</a></li>
-        
-          
-          
+
+
+
           <li><a href="./ThreadError.html">ThreadError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./ThreadGroup.html">ThreadGroup</a></li>
-        
-          
-          
+
+
+
           <li><a href="./Time.html">Time</a></li>
-        
-          
-          
+
+
+
           <li><a href="./TracePoint.html">TracePoint</a></li>
-        
-          
-          
+
+
+
           <li><a href="./TrueClass.html">TrueClass</a></li>
-        
-          
-          
+
+
+
           <li><a href="./TypeError.html">TypeError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./UnboundMethod.html">UnboundMethod</a></li>
-        
-          
-          
+
+
+
           <li><a href="./UncaughtThrowError.html">UncaughtThrowError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./ZeroDivisionError.html">ZeroDivisionError</a></li>
-        
-          
-          
+
+
+
           <li><a href="./fatal.html">fatal</a></li>
-        
-          
-          
+
+
+
           <li><a href="./unknown.html">unknown</a></li>
-        
+
         </ul>
         <div id="no-class-search-results" style="display: none;">No matching classes.</div>
       </div>
 
-      
+
     </div>
   </div> <!-- metadata -->
   <div class="adzbox" id="azk83167">
-    
+
    <div id="carbonads-container"><div class="carbonad">
 <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYIKKQN&amp;placement=rubydocorg" id="_carbonads_js"></script>
   </div></div>
 
-   
-  </div> 
+
+  </div>
   <div id="documentation">
     <h1 class="class">Array</h1>
 
     <div id="description" class="description">
-      
+
 <p>Arrays are ordered, integer-indexed collections of any object.</p>
 
 <p><a href="Array.html">Array</a> indexing starts at 0, as in C or Java.  A
@@ -1258,45 +1258,45 @@ result when supplied with the same block:</p>
     </div>
 <!-- description -->
 
-    
-    
-    
+
+
+
     <div id="5Buntitled-5D" class="documentation-section">
-      
 
-      
 
-      
 
-      
+
+
+
+
 
       <!-- Methods -->
-      
+
       <div id="public-class-method-details" class="method-section section">
         <h3 class="section-header">Public Class Methods</h3>
 
-      
+
         <div id="5B-5D-method" class="method-detail ">
           <a name="method-c-5B-5D"></a>
 
-          
+
           <div class="method-heading">
             <span class="method-name">[]</span><span class="method-args">(*args)</span>
             <span class="method-click-advice">click to toggle source</span>
           </div>
-          
+
           <div>
-  
-            
+
+
             <p>Returns a new array populated with the given objects.</p>
 
 <pre class="ruby"><span class="ruby-constant">Array</span>.<span class="ruby-identifier">[]</span>( <span class="ruby-value">1</span>, <span class="ruby-string">'a'</span>, <span class="ruby-regexp">/^A/</span> ) <span class="ruby-comment"># =&gt; [1, "a", /^A/]</span>
 <span class="ruby-constant">Array</span>[ <span class="ruby-value">1</span>, <span class="ruby-string">'a'</span>, <span class="ruby-regexp">/^A/</span> ]    <span class="ruby-comment"># =&gt; [1, "a", /^A/]</span>
 [ <span class="ruby-value">1</span>, <span class="ruby-string">'a'</span>, <span class="ruby-regexp">/^A/</span> ]         <span class="ruby-comment"># =&gt; [1, "a", /^A/]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="5B-5D-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -1310,49 +1310,49 @@ rb_ary_s_create(int argc, VALUE *argv, VALUE klass)
 
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- 5B-5D-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- 5B-5D-method -->
-      
+
         <div id="new-method" class="method-detail ">
           <a name="method-c-new"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">new(size=0, default=nil)</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">new(array)</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">new(size) {|index| block }</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns a new array.</p>
 
 <p>In the first form, if no arguments are sent, the new array will be empty.
 When a <code>size</code> and an optional <code>default</code> are sent, an
-array is created with <code>size</code> copies of <code>default</code>. 
+array is created with <code>size</code> copies of <code>default</code>.
 Take notice that all elements will reference the same object
 <code>default</code>.</p>
 
@@ -1401,9 +1401,9 @@ to be initialized:</p>
 <span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'cat'</span>] = <span class="ruby-string">'feline'</span>
 <span class="ruby-identifier">a</span> <span class="ruby-comment"># =&gt; [{"cat"=&gt;"feline"}, {}]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="new-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -1462,34 +1462,34 @@ rb_ary_initialize(int argc, VALUE *argv, VALUE ary)
     }
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- new-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- new-method -->
-      
+
         <div id="try_convert-method" class="method-detail ">
           <a name="method-c-try_convert"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">try_convert(obj) → array or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Tries to convert <code>obj</code> into an array, using <code>to_ary</code>
 method.  Returns the converted array or <code>nil</code> if
 <code>obj</code> cannot be converted for any reason. This method can be
@@ -1504,9 +1504,9 @@ used to check if an argument is an array.</p>
   <span class="ruby-comment"># the argument is a string</span>
 <span class="ruby-keyword">end</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="try_convert-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -1514,41 +1514,41 @@ rb_ary_s_try_convert(VALUE dummy, VALUE ary)
 {
     return rb_check_array_type(ary);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- try_convert-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- try_convert-method -->
-      
+
       </div>
 <!-- public-class-method-details -->
-    
+
       <div id="public-instance-method-details" class="method-section section">
         <h3 class="section-header">Public Instance Methods</h3>
 
-      
+
         <div id="26-method" class="method-detail ">
           <a name="method-i-26"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">ary &amp; other_ary      → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Set Intersection — Returns a new array containing elements common to the
 two arrays, excluding any duplicates. The order is preserved from the
 original array.</p>
@@ -1560,9 +1560,9 @@ original array.</p>
 </pre>
 
 <p>See also <a href="Array.html#method-i-uniq">#uniq</a>.</p>
-            
 
-            
+
+
             <div class="method-source-code" id="26-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -1590,39 +1590,39 @@ rb_ary_and(VALUE ary1, VALUE ary2)
 
     return ary3;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- 26-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- 26-method -->
-      
+
         <div id="2A-method" class="method-detail ">
           <a name="method-i-2A"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">ary * int     → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">ary * str     → new_string</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Repetition — With a <a href="String.html">String</a> argument, equivalent
 to <code>ary.join(str)</code>.</p>
 
@@ -1632,9 +1632,9 @@ copies of <code>self</code>.</p>
 <pre class="ruby">[ <span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span> ] <span class="ruby-operator">*</span> <span class="ruby-value">3</span>    <span class="ruby-comment">#=&gt; [ 1, 2, 3, 1, 2, 3, 1, 2, 3 ]</span>
 [ <span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span> ] <span class="ruby-operator">*</span> <span class="ruby-string">","</span>  <span class="ruby-comment">#=&gt; "1,2,3"</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="2A-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -1682,34 +1682,34 @@ rb_ary_times(VALUE ary, VALUE times)
 
     return ary2;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- 2A-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- 2A-method -->
-      
+
         <div id="2B-method" class="method-detail ">
           <a name="method-i-2B"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">ary + other_ary   → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Concatenation — Returns a new array built by concatenating the two arrays
 together to produce a third array.</p>
 
@@ -1734,9 +1734,9 @@ together to produce a third array.</p>
 <code>+=</code> on arrays can be quite inefficient.</p>
 
 <p>See also <a href="Array.html#method-i-concat">#concat</a>.</p>
-            
 
-            
+
+
             <div class="method-source-code" id="2B-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -1756,34 +1756,34 @@ rb_ary_plus(VALUE x, VALUE y)
     ARY_SET_LEN(z, len);
     return z;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- 2B-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- 2B-method -->
-      
+
         <div id="2D-method" class="method-detail ">
           <a name="method-i-2D"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">ary - other_ary    → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p><a href="Array.html">Array</a> Difference</p>
 
 <p>Returns a new array that is a copy of the original array, removing any
@@ -1796,9 +1796,9 @@ from the original array.</p>
 </pre>
 
 <p>If you need set-like behavior, see the library class Set.</p>
-            
 
-            
+
+
             <div class="method-source-code" id="2D-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -1818,43 +1818,43 @@ rb_ary_diff(VALUE ary1, VALUE ary2)
     ary_recycle_hash(hash);
     return ary3;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- 2D-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- 2D-method -->
-      
+
         <div id="3C-3C-method" class="method-detail ">
           <a name="method-i-3C-3C"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">ary &lt;&lt; obj            → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Append—Pushes the given object on to the end of this array. This expression
 returns the array itself, so several appends may be chained together.</p>
 
 <pre class="ruby">[ <span class="ruby-value">1</span>, <span class="ruby-value">2</span> ] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">"c"</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">"d"</span> <span class="ruby-operator">&lt;&lt;</span> [ <span class="ruby-value">3</span>, <span class="ruby-value">4</span> ]
         <span class="ruby-comment">#=&gt;  [ 1, 2, "c", "d", [ 3, 4 ] ]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="3C-3C-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -1868,34 +1868,34 @@ rb_ary_push(VALUE ary, VALUE item)
     ARY_SET_LEN(ary, idx + 1);
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- 3C-3C-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- 3C-3C-method -->
-      
+
         <div id="3C-3D-3E-method" class="method-detail ">
           <a name="method-i-3C-3D-3E"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">ary &lt;=&gt; other_ary   →  -1, 0, +1 or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Comparison — Returns an integer (<code>-1</code>, <code>0</code>, or
 <code>+1</code>) if this array is less than, equal to, or greater than
 <code>other_ary</code>.</p>
@@ -1922,9 +1922,9 @@ or if the comparison of two elements returned <code>nil</code>.</p>
 [ <span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span>, <span class="ruby-value">4</span>, <span class="ruby-value">5</span>, <span class="ruby-value">6</span> ] <span class="ruby-operator">&lt;=&gt;</span> [ <span class="ruby-value">1</span>, <span class="ruby-value">2</span> ]            <span class="ruby-comment">#=&gt; +1</span>
 [ <span class="ruby-value">1</span>, <span class="ruby-value">2</span> ]             <span class="ruby-operator">&lt;=&gt;</span> [ <span class="ruby-value">1</span>, <span class="ruby-value">:two</span> ]         <span class="ruby-comment">#=&gt; nil</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="3C-3D-3E-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -1943,34 +1943,34 @@ rb_ary_cmp(VALUE ary1, VALUE ary2)
     if (len &gt; 0) return INT2FIX(1);
     return INT2FIX(-1);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- 3C-3D-3E-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- 3C-3D-3E-method -->
-      
+
         <div id="3D-3D-method" class="method-detail ">
           <a name="method-i-3D-3D"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">ary == other_ary   →   bool</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Equality — Two arrays are equal if they contain the same number of elements
 and if each element is equal to (according to Object#==) the corresponding
 element in <code>other_ary</code>.</p>
@@ -1979,9 +1979,9 @@ element in <code>other_ary</code>.</p>
 [ <span class="ruby-string">"a"</span>, <span class="ruby-string">"c"</span>, <span class="ruby-value">7</span> ] <span class="ruby-operator">==</span> [ <span class="ruby-string">"a"</span>, <span class="ruby-string">"c"</span>, <span class="ruby-value">7</span> ]     <span class="ruby-comment">#=&gt; true</span>
 [ <span class="ruby-string">"a"</span>, <span class="ruby-string">"c"</span>, <span class="ruby-value">7</span> ] <span class="ruby-operator">==</span> [ <span class="ruby-string">"a"</span>, <span class="ruby-string">"d"</span>, <span class="ruby-string">"f"</span> ]   <span class="ruby-comment">#=&gt; false</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="3D-3D-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -1998,59 +1998,59 @@ rb_ary_equal(VALUE ary1, VALUE ary2)
     if (RARRAY_CONST_PTR(ary1) == RARRAY_CONST_PTR(ary2)) return Qtrue;
     return rb_exec_recursive_paired(recursive_equal, ary1, ary2, ary2);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- 3D-3D-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- 3D-3D-method -->
-      
+
         <div id="5B-5D-method" class="method-detail ">
           <a name="method-i-5B-5D"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">ary[index]                → obj     or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">ary[start, length]        → new_ary or nil</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">ary[range]                → new_ary or nil</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">slice(index)          → obj     or nil</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">slice(start, length)  → new_ary or nil</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">slice(range)          → new_ary or nil</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Element Reference — Returns the element at <code>index</code>, or returns a
 subarray starting at the <code>start</code> index and continuing for
 <code>length</code> elements, or returns a subarray specified by
@@ -2077,9 +2077,9 @@ when the starting index for an element range is at the end of the array.</p>
 <span class="ruby-identifier">a</span>[<span class="ruby-value">5</span>, <span class="ruby-value">1</span>]                <span class="ruby-comment">#=&gt; []</span>
 <span class="ruby-identifier">a</span>[<span class="ruby-value">5</span><span class="ruby-operator">..</span><span class="ruby-value">10</span>]               <span class="ruby-comment">#=&gt; []</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="5B-5D-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -2115,44 +2115,44 @@ rb_ary_aref(int argc, const VALUE *argv, VALUE ary)
     }
     return rb_ary_entry(ary, NUM2LONG(arg));
 }
-            </pre> 
+            </pre>
             </div>
 <!-- 5B-5D-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- 5B-5D-method -->
-      
+
         <div id="5B-5D-3D-method" class="method-detail ">
           <a name="method-i-5B-5D-3D"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">ary[index]         = obj                      →  obj</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">ary[start, length] = obj or other_ary or nil  →  obj or other_ary or nil</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">ary[range]         = obj or other_ary or nil  →  obj or other_ary or nil</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Element Assignment — Sets the element at <code>index</code>, or replaces a
 subarray from the <code>start</code> index for <code>length</code>
 elements, or replaces a subarray specified by the <code>range</code> of
@@ -2183,9 +2183,9 @@ points past the beginning of the array.</p>
 <span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>, <span class="ruby-value">0</span>] = [ <span class="ruby-value">1</span>, <span class="ruby-value">2</span> ]          <span class="ruby-comment">#=&gt; [1, 2, "A"]</span>
 <span class="ruby-identifier">a</span>[<span class="ruby-value">3</span>, <span class="ruby-value">0</span>] = <span class="ruby-string">"B"</span>               <span class="ruby-comment">#=&gt; [1, 2, "A", "B"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="5B-5D-3D-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -2217,38 +2217,38 @@ fixnum:
     rb_ary_store(ary, offset, argv[1]);
     return argv[1];
 }
-            </pre> 
+            </pre>
             </div>
 <!-- 5B-5D-3D-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- 5B-5D-3D-method -->
-      
+
         <div id="any-3F-method" class="method-detail ">
           <a name="method-i-any-3F"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">any? [{ |obj| block }]   → true or false</span>
-            
-            <span class="method-click-advice">click to toggle source</span>
-            
-          </div>
-          
-          
-          <div>
-  
-            
-            <p>See also <a href="Enumerable.html#method-i-any-3F">Enumerable#any?</a></p>
-            
 
-            
+            <span class="method-click-advice">click to toggle source</span>
+
+          </div>
+
+
+          <div>
+
+
+            <p>See also <a href="Enumerable.html#method-i-any-3F">Enumerable#any?</a></p>
+
+
+
             <div class="method-source-code" id="any-3F-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -2268,34 +2268,34 @@ rb_ary_any_p(VALUE ary)
     }
     return Qfalse;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- any-3F-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- any-3F-method -->
-      
+
         <div id="assoc-method" class="method-detail ">
           <a name="method-i-assoc"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">assoc(obj)   → element_ary  or  nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Searches through an array whose elements are also arrays comparing
 <code>obj</code> with the first element of each contained array using
 <code>obj.==</code>.</p>
@@ -2312,9 +2312,9 @@ associated array), or <code>nil</code> if no match is found.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">assoc</span>(<span class="ruby-string">"letters"</span>)  <span class="ruby-comment">#=&gt; [ "letters", "a", "b", "c" ]</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">assoc</span>(<span class="ruby-string">"foo"</span>)      <span class="ruby-comment">#=&gt; nil</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="assoc-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -2331,34 +2331,34 @@ rb_ary_assoc(VALUE ary, VALUE key)
     }
     return Qnil;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- assoc-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- assoc-method -->
-      
+
         <div id="at-method" class="method-detail ">
           <a name="method-i-at"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">at(index)   →   obj  or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns the element at <code>index</code>. A negative index counts from the
 end of <code>self</code>. Returns <code>nil</code> if the index is out of
 range. See also <a href="Array.html#method-i-5B-5D">#[]</a>.</p>
@@ -2367,9 +2367,9 @@ range. See also <a href="Array.html#method-i-5B-5D">#[]</a>.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">0</span>)     <span class="ruby-comment">#=&gt; "a"</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">-1</span>)    <span class="ruby-comment">#=&gt; "e"</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="at-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -2377,34 +2377,34 @@ rb_ary_at(VALUE ary, VALUE pos)
 {
     return rb_ary_entry(ary, NUM2LONG(pos));
 }
-            </pre> 
+            </pre>
             </div>
 <!-- at-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- at-method -->
-      
+
         <div id="bsearch-method" class="method-detail ">
           <a name="method-i-bsearch"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">bsearch {|x| block }  → elem</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>By using binary search, finds a value from this array which meets the given
 condition in O(log n) where n is the size of the array.</p>
 
@@ -2466,9 +2466,9 @@ block), this method returns nil.</p>
 <p>You must not mix the two modes at a time; the block must always return
 either true/false, or always return a number.  It is undefined which value
 is actually picked up at each iteration.</p>
-            
 
-            
+
+
             <div class="method-source-code" id="bsearch-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -2481,34 +2481,34 @@ rb_ary_bsearch(VALUE ary)
     }
     return index_result;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- bsearch-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- bsearch-method -->
-      
+
         <div id="bsearch_index-method" class="method-detail ">
           <a name="method-i-bsearch_index"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">bsearch_index {|x| block }  → int or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>By using binary search, finds an index of a value from this array which
 meets the given condition in O(log n) where n is the size of the array.</p>
 
@@ -2516,9 +2516,9 @@ meets the given condition in O(log n) where n is the size of the array.</p>
 exactly the same as in the case of <a href="Array.html#method-i-bsearch">bsearch</a> method with the only
 difference being that this method returns the index of the element instead
 of the element itself. For more details consult the documentation for <a href="Array.html#method-i-bsearch">bsearch</a>.</p>
-            
 
-            
+
+
             <div class="method-source-code" id="bsearch_index-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -2567,42 +2567,42 @@ rb_ary_bsearch_index(VALUE ary)
     if (!satisfied) return Qnil;
     return INT2FIX(low);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- bsearch_index-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- bsearch_index-method -->
-      
+
         <div id="clear-method" class="method-detail ">
           <a name="method-i-clear"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">clear    → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Removes all elements from <code>self</code>.</p>
 
 <pre class="ruby"><span class="ruby-identifier">a</span> = [ <span class="ruby-string">"a"</span>, <span class="ruby-string">"b"</span>, <span class="ruby-string">"c"</span>, <span class="ruby-string">"d"</span>, <span class="ruby-string">"e"</span> ]
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">clear</span>    <span class="ruby-comment">#=&gt; [ ]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="clear-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -2621,39 +2621,39 @@ rb_ary_clear(VALUE ary)
     }
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- clear-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- clear-method -->
-      
+
         <div id="collect-method" class="method-detail ">
           <a name="method-i-collect"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">collect { |item| block }  → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">collect                   → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Invokes the given block once for each element of <code>self</code>.</p>
 
 <p>Creates a new array containing the values returned by the block.</p>
@@ -2668,9 +2668,9 @@ returned instead.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">map</span>.<span class="ruby-identifier">with_index</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">i</span> } <span class="ruby-comment">#=&gt; ["", "b", "cc", "ddd"]</span>
 <span class="ruby-identifier">a</span>                                 <span class="ruby-comment">#=&gt; ["a", "b", "c", "d"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="collect-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -2686,39 +2686,39 @@ rb_ary_collect(VALUE ary)
     }
     return collect;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- collect-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- collect-method -->
-      
+
         <div id="collect-21-method" class="method-detail ">
           <a name="method-i-collect-21"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">collect! {|item| block }   → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">collect!                   → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Invokes the given block once for each element of <code>self</code>,
 replacing the element with the value returned by the block.</p>
 
@@ -2733,9 +2733,9 @@ returned instead.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">collect!</span>.<span class="ruby-identifier">with_index</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">i</span>] }
 <span class="ruby-identifier">a</span> <span class="ruby-comment">#=&gt;  ["", "b", "c!", "d!"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="collect-21-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -2750,39 +2750,39 @@ rb_ary_collect_bang(VALUE ary)
     }
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- collect-21-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- collect-21-method -->
-      
+
         <div id="combination-method" class="method-detail ">
           <a name="method-i-combination"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">combination(n) { |c| block }    → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">combination(n)                  → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>When invoked with a block, yields all combinations of length <code>n</code>
 of elements from the array and then returns the array itself.</p>
 
@@ -2802,9 +2802,9 @@ returned instead.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">combination</span>(<span class="ruby-value">0</span>).<span class="ruby-identifier">to_a</span>  <span class="ruby-comment">#=&gt; [[]] # one combination of length 0</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">combination</span>(<span class="ruby-value">5</span>).<span class="ruby-identifier">to_a</span>  <span class="ruby-comment">#=&gt; []   # no combinations of length 5</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="combination-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -2838,43 +2838,43 @@ rb_ary_combination(VALUE ary, VALUE num)
     }
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- combination-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- combination-method -->
-      
+
         <div id="compact-method" class="method-detail ">
           <a name="method-i-compact"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">compact     → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns a copy of <code>self</code> with all <code>nil</code> elements
 removed.</p>
 
 <pre class="ruby">[ <span class="ruby-string">"a"</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-string">"b"</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-string">"c"</span>, <span class="ruby-keyword">nil</span> ].<span class="ruby-identifier">compact</span>
                   <span class="ruby-comment">#=&gt; [ "a", "b", "c" ]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="compact-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -2884,34 +2884,34 @@ rb_ary_compact(VALUE ary)
     rb_ary_compact_bang(ary);
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- compact-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- compact-method -->
-      
+
         <div id="compact-21-method" class="method-detail ">
           <a name="method-i-compact-21"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">compact!    → ary  or  nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Removes <code>nil</code> elements from the array.</p>
 
 <p>Returns <code>nil</code> if no changes were made, otherwise returns the
@@ -2920,9 +2920,9 @@ array.</p>
 <pre class="ruby">[ <span class="ruby-string">"a"</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-string">"b"</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-string">"c"</span> ].<span class="ruby-identifier">compact!</span> <span class="ruby-comment">#=&gt; [ "a", "b", "c" ]</span>
 [ <span class="ruby-string">"a"</span>, <span class="ruby-string">"b"</span>, <span class="ruby-string">"c"</span> ].<span class="ruby-identifier">compact!</span>           <span class="ruby-comment">#=&gt; nil</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="compact-21-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -2947,34 +2947,34 @@ rb_ary_compact_bang(VALUE ary)
 
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- compact-21-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- compact-21-method -->
-      
+
         <div id="concat-method" class="method-detail ">
           <a name="method-i-concat"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">concat(other_ary)   → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Appends the elements of <code>other_ary</code> to <code>self</code>.</p>
 
 <pre class="ruby">[ <span class="ruby-string">"a"</span>, <span class="ruby-string">"b"</span> ].<span class="ruby-identifier">concat</span>( [<span class="ruby-string">"c"</span>, <span class="ruby-string">"d"</span>] ) <span class="ruby-comment">#=&gt; [ "a", "b", "c", "d" ]</span>
@@ -2984,9 +2984,9 @@ rb_ary_compact_bang(VALUE ary)
 </pre>
 
 <p>See also Array#+.</p>
-            
 
-            
+
+
             <div class="method-source-code" id="concat-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -2999,44 +2999,44 @@ rb_ary_concat(VALUE x, VALUE y)
     }
     return x;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- concat-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- concat-method -->
-      
+
         <div id="count-method" class="method-detail ">
           <a name="method-i-count"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">count                   → int</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">count(obj)              → int</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">count { |item| block }  → int</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns the number of elements.</p>
 
 <p>If an argument is given, counts the number of elements which equal
@@ -3050,9 +3050,9 @@ returns a true value.</p>
 <span class="ruby-identifier">ary</span>.<span class="ruby-identifier">count</span>(<span class="ruby-value">2</span>)               <span class="ruby-comment">#=&gt; 2</span>
 <span class="ruby-identifier">ary</span>.<span class="ruby-identifier">count</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span><span class="ruby-operator">%</span><span class="ruby-value">2</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> } <span class="ruby-comment">#=&gt; 3</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="count-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -3085,39 +3085,39 @@ rb_ary_count(int argc, VALUE *argv, VALUE ary)
 
     return LONG2NUM(n);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- count-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- count-method -->
-      
+
         <div id="cycle-method" class="method-detail ">
           <a name="method-i-cycle"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">cycle(n=nil) { |obj| block }  → nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">cycle(n=nil)                  → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Calls the given block for each element <code>n</code> times or forever if
 <code>nil</code> is given.</p>
 
@@ -3133,9 +3133,9 @@ returned instead.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">cycle</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">puts</span> <span class="ruby-identifier">x</span> }     <span class="ruby-comment"># print, a, b, c, a, b, c,.. forever.</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">cycle</span>(<span class="ruby-value">2</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">puts</span> <span class="ruby-identifier">x</span> }  <span class="ruby-comment"># print, a, b, c, a, b, c.</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="cycle-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -3162,39 +3162,39 @@ rb_ary_cycle(int argc, VALUE *argv, VALUE ary)
     }
     return Qnil;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- cycle-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- cycle-method -->
-      
+
         <div id="delete-method" class="method-detail ">
           <a name="method-i-delete"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">delete(obj)            → item or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">delete(obj) { block }  → item or result of block</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Deletes all items from <code>self</code> that are equal to
 <code>obj</code>.</p>
 
@@ -3211,9 +3211,9 @@ informative return value, use <a href="Array.html#method-i-compact-21">#compact!
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">"z"</span>)                   <span class="ruby-comment">#=&gt; nil</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">"z"</span>) { <span class="ruby-string">"not found"</span> }   <span class="ruby-comment">#=&gt; "not found"</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="delete-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -3245,34 +3245,34 @@ rb_ary_delete(VALUE ary, VALUE item)
 
     return v;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- delete-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- delete-method -->
-      
+
         <div id="delete_at-method" class="method-detail ">
           <a name="method-i-delete_at"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">delete_at(index)  → obj or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Deletes the element at the specified <code>index</code>, returning that
 element, or <code>nil</code> if the <code>index</code> is out of range.</p>
 
@@ -3283,9 +3283,9 @@ element, or <code>nil</code> if the <code>index</code> is out of range.</p>
 <span class="ruby-identifier">a</span>                 <span class="ruby-comment">#=&gt; ["ant", "bat", "dog"]</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">delete_at</span>(<span class="ruby-value">99</span>)   <span class="ruby-comment">#=&gt; nil</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="delete_at-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -3293,39 +3293,39 @@ rb_ary_delete_at_m(VALUE ary, VALUE pos)
 {
     return rb_ary_delete_at(ary, NUM2LONG(pos));
 }
-            </pre> 
+            </pre>
             </div>
 <!-- delete_at-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- delete_at-method -->
-      
+
         <div id="delete_if-method" class="method-detail ">
           <a name="method-i-delete_if"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">delete_if { |item| block }  → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">delete_if                   → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Deletes every element of <code>self</code> for which block evaluates to
 <code>true</code>.</p>
 
@@ -3340,9 +3340,9 @@ returned instead.</p>
 <pre class="ruby"><span class="ruby-identifier">scores</span> = [ <span class="ruby-value">97</span>, <span class="ruby-value">42</span>, <span class="ruby-value">75</span> ]
 <span class="ruby-identifier">scores</span>.<span class="ruby-identifier">delete_if</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">score</span><span class="ruby-operator">|</span> <span class="ruby-identifier">score</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">80</span> }   <span class="ruby-comment">#=&gt; [97]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="delete_if-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -3352,34 +3352,34 @@ rb_ary_delete_if(VALUE ary)
     ary_reject_bang(ary);
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- delete_if-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- delete_if-method -->
-      
+
         <div id="dig-method" class="method-detail ">
           <a name="method-i-dig"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">dig(idx, ...)                 → object</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Extracts the nested value specified by the sequence of <em>idx</em> objects
 by calling <code>dig</code> at each step, returning <code>nil</code> if any
 intermediate step is <code>nil</code>.</p>
@@ -3391,9 +3391,9 @@ intermediate step is <code>nil</code>.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">dig</span>(<span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>)                    <span class="ruby-comment">#=&gt; NoMethodError, undefined method `dig' for 1:Fixnum</span>
 [<span class="ruby-value">42</span>, {<span class="ruby-value">foo:</span> <span class="ruby-value">:bar</span>}].<span class="ruby-identifier">dig</span>(<span class="ruby-value">1</span>, <span class="ruby-value">:foo</span>)    <span class="ruby-comment">#=&gt; :bar</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="dig-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -3405,34 +3405,34 @@ rb_ary_dig(int argc, VALUE *argv, VALUE self)
     ++argv;
     return rb_obj_dig(argc, argv, self, Qnil);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- dig-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- dig-method -->
-      
+
         <div id="drop-method" class="method-detail ">
           <a name="method-i-drop"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">drop(n)               → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Drops first <code>n</code> elements from <code>ary</code> and returns the
 rest of the elements in an array.</p>
 
@@ -3443,9 +3443,9 @@ rest of the elements in an array.</p>
 <pre class="ruby"><span class="ruby-identifier">a</span> = [<span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span>, <span class="ruby-value">4</span>, <span class="ruby-value">5</span>, <span class="ruby-value">0</span>]
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">drop</span>(<span class="ruby-value">3</span>)             <span class="ruby-comment">#=&gt; [4, 5, 0]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="drop-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -3461,39 +3461,39 @@ rb_ary_drop(VALUE ary, VALUE n)
     if (result == Qnil) result = rb_ary_new();
     return result;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- drop-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- drop-method -->
-      
+
         <div id="drop_while-method" class="method-detail ">
           <a name="method-i-drop_while"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">drop_while { |obj| block }   → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">drop_while                  → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Drops elements up to, but not including, the first element for which the
 block returns <code>nil</code> or <code>false</code> and returns an array
 containing the remaining elements.</p>
@@ -3506,9 +3506,9 @@ returned instead.</p>
 <pre class="ruby"><span class="ruby-identifier">a</span> = [<span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span>, <span class="ruby-value">4</span>, <span class="ruby-value">5</span>, <span class="ruby-value">0</span>]
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">drop_while</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span> }   <span class="ruby-comment">#=&gt; [3, 4, 5, 0]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="drop_while-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -3522,39 +3522,39 @@ rb_ary_drop_while(VALUE ary)
     }
     return rb_ary_drop(ary, LONG2FIX(i));
 }
-            </pre> 
+            </pre>
             </div>
 <!-- drop_while-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- drop_while-method -->
-      
+
         <div id="each-method" class="method-detail ">
           <a name="method-i-each"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">each { |item| block }  → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">each                   → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Calls the given block once for each element in <code>self</code>, passing
 that element as a parameter.  Returns the array itself.</p>
 
@@ -3568,9 +3568,9 @@ returned.</p>
 <p>produces:</p>
 
 <pre>a -- b -- c --</pre>
-            
 
-            
+
+
             <div class="method-source-code" id="each-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -3584,39 +3584,39 @@ rb_ary_each(VALUE ary)
     }
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- each-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- each-method -->
-      
+
         <div id="each_index-method" class="method-detail ">
           <a name="method-i-each_index"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">each_index { |index| block }  → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">each_index                    → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Same as <a href="Array.html#method-i-each">#each</a>, but passes the
 <code>index</code> of the element instead of the element itself.</p>
 
@@ -3630,9 +3630,9 @@ given.</p>
 <p>produces:</p>
 
 <pre>0 -- 1 -- 2 --</pre>
-            
 
-            
+
+
             <div class="method-source-code" id="each_index-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -3646,41 +3646,41 @@ rb_ary_each_index(VALUE ary)
     }
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- each_index-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- each_index-method -->
-      
+
         <div id="empty-3F-method" class="method-detail ">
           <a name="method-i-empty-3F"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">empty?   → true or false</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns <code>true</code> if <code>self</code> contains no elements.</p>
 
 <pre class="ruby">[].<span class="ruby-identifier">empty?</span>   <span class="ruby-comment">#=&gt; true</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="empty-3F-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -3690,39 +3690,39 @@ rb_ary_empty_p(VALUE ary)
         return Qtrue;
     return Qfalse;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- empty-3F-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- empty-3F-method -->
-      
+
         <div id="eql-3F-method" class="method-detail ">
           <a name="method-i-eql-3F"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">eql?(other)  → true or false</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns <code>true</code> if <code>self</code> and <code>other</code> are
 the same object, or are both arrays with the same content (according to <a href="Object.html#method-i-eql-3F">Object#eql?</a>).</p>
-            
 
-            
+
+
             <div class="method-source-code" id="eql-3F-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -3734,44 +3734,44 @@ rb_ary_eql(VALUE ary1, VALUE ary2)
     if (RARRAY_CONST_PTR(ary1) == RARRAY_CONST_PTR(ary2)) return Qtrue;
     return rb_exec_recursive_paired(recursive_eql, ary1, ary2, ary2);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- eql-3F-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- eql-3F-method -->
-      
+
         <div id="fetch-method" class="method-detail ">
           <a name="method-i-fetch"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">fetch(index)                    → obj</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">fetch(index, default)           → obj</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">fetch(index) { |index| block }  → obj</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Tries to return the element at position <code>index</code>, but throws an
 <a href="IndexError.html">IndexError</a> exception if the referenced
 <code>index</code> lies outside of the array bounds.  This error can be
@@ -3789,9 +3789,9 @@ count from the end of the array.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">100</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">puts</span> <span class="ruby-node">"#{i} is out of bounds"</span> }
                          <span class="ruby-comment">#=&gt; "100 is out of bounds"</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="fetch-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -3821,59 +3821,59 @@ rb_ary_fetch(int argc, VALUE *argv, VALUE ary)
     }
     return RARRAY_AREF(ary, idx);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- fetch-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- fetch-method -->
-      
+
         <div id="fill-method" class="method-detail ">
           <a name="method-i-fill"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">fill(obj)                                 → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">fill(obj, start [, length])               → ary</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">fill(obj, range )                         → ary</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">fill { |index| block }                    → ary</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">fill(start [, length] ) { |index| block } → ary</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">fill(range) { |index| block }             → ary</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>The first three forms set the selected elements of <code>self</code> (which
 may be the entire array) to <code>obj</code>.</p>
 
@@ -3895,9 +3895,9 @@ where <code>-1</code> is the last element.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">fill</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span><span class="ruby-operator">*</span><span class="ruby-identifier">i</span> }       <span class="ruby-comment">#=&gt; [0, 1, 4, 9]</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">fill</span>(<span class="ruby-value">-2</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span><span class="ruby-operator">*</span><span class="ruby-identifier">i</span><span class="ruby-operator">*</span><span class="ruby-identifier">i</span> } <span class="ruby-comment">#=&gt; [0, 1, 8, 27]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="fill-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -3965,44 +3965,44 @@ rb_ary_fill(int argc, VALUE *argv, VALUE ary)
     }
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- fill-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- fill-method -->
-      
+
         <div id="find_index-method" class="method-detail ">
           <a name="method-i-find_index"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">find_index(obj)             →  int or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">find_index { |item| block } →  int or nil</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">find_index                  →  Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns the <em>index</em> of the first object in <code>ary</code> such
 that the object is <code>==</code> to <code>obj</code>.</p>
 
@@ -4020,9 +4020,9 @@ nor argument is given.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">index</span>(<span class="ruby-string">"z"</span>)              <span class="ruby-comment">#=&gt; nil</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">index</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-string">"b"</span> }  <span class="ruby-comment">#=&gt; 1</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="find_index-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -4062,39 +4062,39 @@ rb_ary_index(int argc, VALUE *argv, VALUE ary)
     }
     return Qnil;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- find_index-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- find_index-method -->
-      
+
         <div id="first-method" class="method-detail ">
           <a name="method-i-first"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">first     →   obj or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">first(n)  →   new_ary</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns the first element, or the first <code>n</code> elements, of the
 array. If the array is empty, the first form returns <code>nil</code>, and
 the second form returns an empty array. See also <a href="Array.html#method-i-last">#last</a> for the opposite effect.</p>
@@ -4103,9 +4103,9 @@ the second form returns an empty array. See also <a href="Array.html#method-i-la
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">first</span>     <span class="ruby-comment">#=&gt; "q"</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">first</span>(<span class="ruby-value">2</span>)  <span class="ruby-comment">#=&gt; ["q", "r"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="first-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -4119,39 +4119,39 @@ rb_ary_first(int argc, VALUE *argv, VALUE ary)
         return ary_take_first_or_last(argc, argv, ary, ARY_TAKE_FIRST);
     }
 }
-            </pre> 
+            </pre>
             </div>
 <!-- first-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- first-method -->
-      
+
         <div id="flatten-method" class="method-detail ">
           <a name="method-i-flatten"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">flatten → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">flatten(level) → new_ary</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns a new array that is a one-dimensional flattening of
 <code>self</code> (recursively).</p>
 
@@ -4168,9 +4168,9 @@ to flatten.</p>
 <span class="ruby-identifier">a</span> = [ <span class="ruby-value">1</span>, <span class="ruby-value">2</span>, [<span class="ruby-value">3</span>, [<span class="ruby-value">4</span>, <span class="ruby-value">5</span>] ] ]
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">flatten</span>(<span class="ruby-value">1</span>)              <span class="ruby-comment">#=&gt; [1, 2, 3, [4, 5]]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="flatten-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -4188,39 +4188,39 @@ rb_ary_flatten(int argc, VALUE *argv, VALUE ary)
 
     return result;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- flatten-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- flatten-method -->
-      
+
         <div id="flatten-21-method" class="method-detail ">
           <a name="method-i-flatten-21"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">flatten!        → ary or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">flatten!(level) → ary or nil</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Flattens <code>self</code> in place.</p>
 
 <p>Returns <code>nil</code> if no modifications were made (i.e., the array
@@ -4236,9 +4236,9 @@ to flatten.</p>
 <span class="ruby-identifier">a</span> = [ <span class="ruby-value">1</span>, <span class="ruby-value">2</span>, [<span class="ruby-value">3</span>, [<span class="ruby-value">4</span>, <span class="ruby-value">5</span>] ] ]
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">flatten!</span>(<span class="ruby-value">1</span>) <span class="ruby-comment">#=&gt; [1, 2, 3, [4, 5]]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="flatten-21-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -4263,39 +4263,39 @@ rb_ary_flatten_bang(int argc, VALUE *argv, VALUE ary)
 
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- flatten-21-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- flatten-21-method -->
-      
+
         <div id="frozen-3F-method" class="method-detail ">
           <a name="method-i-frozen-3F"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">frozen?  → true or false</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Return <code>true</code> if this array is frozen (or temporarily frozen
 while being sorted). See also <a href="Object.html#method-i-frozen-3F">Object#frozen?</a></p>
-            
 
-            
+
+
             <div class="method-source-code" id="frozen-3F-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -4304,43 +4304,43 @@ rb_ary_frozen_p(VALUE ary)
     if (OBJ_FROZEN(ary)) return Qtrue;
     return Qfalse;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- frozen-3F-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- frozen-3F-method -->
-      
+
         <div id="hash-method" class="method-detail ">
           <a name="method-i-hash"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">hash   → fixnum</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Compute a hash-code for this array.</p>
 
 <p>Two arrays with the same content will have the same hash code (and will
 compare using <a href="Array.html#method-i-eql-3F">eql?</a>).</p>
 
 <p>See also <a href="Object.html#method-i-hash">Object#hash</a>.</p>
-            
 
-            
+
+
             <div class="method-source-code" id="hash-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -4359,34 +4359,34 @@ rb_ary_hash(VALUE ary)
     h = rb_hash_end(h);
     return LONG2FIX(h);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- hash-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- hash-method -->
-      
+
         <div id="include-3F-method" class="method-detail ">
           <a name="method-i-include-3F"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">include?(object)   → true or false</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns <code>true</code> if the given <code>object</code> is present in
 <code>self</code> (that is, if any element <code>==</code>
 <code>object</code>), otherwise returns <code>false</code>.</p>
@@ -4395,9 +4395,9 @@ rb_ary_hash(VALUE ary)
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">"b"</span>)   <span class="ruby-comment">#=&gt; true</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">"z"</span>)   <span class="ruby-comment">#=&gt; false</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="include-3F-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -4418,44 +4418,44 @@ rb_ary_includes(VALUE ary, VALUE item)
     }
     return Qfalse;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- include-3F-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- include-3F-method -->
-      
+
         <div id="index-method" class="method-detail ">
           <a name="method-i-index"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">index(obj)             →  int or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">index { |item| block } →  int or nil</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">index                  →  Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns the <em>index</em> of the first object in <code>ary</code> such
 that the object is <code>==</code> to <code>obj</code>.</p>
 
@@ -4473,9 +4473,9 @@ nor argument is given.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">index</span>(<span class="ruby-string">"z"</span>)              <span class="ruby-comment">#=&gt; nil</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">index</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-string">"b"</span> }  <span class="ruby-comment">#=&gt; 1</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="index-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -4515,34 +4515,34 @@ rb_ary_index(int argc, VALUE *argv, VALUE ary)
     }
     return Qnil;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- index-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- index-method -->
-      
+
         <div id="initialize_copy-method" class="method-detail ">
           <a name="method-i-initialize_copy"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">initialize_copy(other_ary)   → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Replaces the contents of <code>self</code> with the contents of
 <code>other_ary</code>, truncating or expanding if necessary.</p>
 
@@ -4550,9 +4550,9 @@ rb_ary_index(int argc, VALUE *argv, VALUE ary)
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">replace</span>([ <span class="ruby-string">"x"</span>, <span class="ruby-string">"y"</span>, <span class="ruby-string">"z"</span> ])   <span class="ruby-comment">#=&gt; ["x", "y", "z"]</span>
 <span class="ruby-identifier">a</span>                              <span class="ruby-comment">#=&gt; ["x", "y", "z"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="initialize_copy-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -4594,34 +4594,34 @@ rb_ary_replace(VALUE copy, VALUE orig)
     }
     return copy;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- initialize_copy-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- initialize_copy-method -->
-      
+
         <div id="insert-method" class="method-detail ">
           <a name="method-i-insert"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">insert(index, obj...)  → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Inserts the given values before the element with the given
 <code>index</code>.</p>
 
@@ -4634,9 +4634,9 @@ values will be inserted after that element, so using an index of
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">2</span>, <span class="ruby-value">99</span>)         <span class="ruby-comment">#=&gt; ["a", "b", 99, "c", "d"]</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">-2</span>, <span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span>)   <span class="ruby-comment">#=&gt; ["a", "b", 99, "c", 1, 2, 3, "d"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="insert-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -4657,46 +4657,46 @@ rb_ary_insert(int argc, VALUE *argv, VALUE ary)
     rb_ary_splice(ary, pos, 0, rb_ary_new4(argc - 1, argv + 1));
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- insert-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- insert-method -->
-      
+
         <div id="inspect-method" class="method-detail ">
           <a name="method-i-inspect"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">inspect  → string</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">to_s     → string</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Creates a string representation of <code>self</code>.</p>
 
 <pre class="ruby">[ <span class="ruby-string">"a"</span>, <span class="ruby-string">"b"</span>, <span class="ruby-string">"c"</span> ].<span class="ruby-identifier">to_s</span>     <span class="ruby-comment">#=&gt; "[\"a\", \"b\", \"c\"]"</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="inspect-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -4705,38 +4705,38 @@ rb_ary_inspect(VALUE ary)
     if (RARRAY_LEN(ary) == 0) return rb_usascii_str_new2("[]");
     return rb_exec_recursive(inspect_ary, ary, 0);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- inspect-source -->
-            
+
           </div>
 
-          
+
           <div class="aliases">
             Also aliased as: <a href="Array.html#method-i-to_s">to_s</a>
           </div>
-          
 
-          
+
+
         </div>
 <!-- inspect-method -->
-      
+
         <div id="join-method" class="method-detail ">
           <a name="method-i-join"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">join(separator=$,)    → str</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns a string created by converting each element of the array to a
 string, separated by the given <code>separator</code>. If the
 <code>separator</code> is <code>nil</code>, it uses current $,. If both the
@@ -4745,9 +4745,9 @@ string, separated by the given <code>separator</code>. If the
 <pre class="ruby">[ <span class="ruby-string">"a"</span>, <span class="ruby-string">"b"</span>, <span class="ruby-string">"c"</span> ].<span class="ruby-identifier">join</span>        <span class="ruby-comment">#=&gt; "abc"</span>
 [ <span class="ruby-string">"a"</span>, <span class="ruby-string">"b"</span>, <span class="ruby-string">"c"</span> ].<span class="ruby-identifier">join</span>(<span class="ruby-string">"-"</span>)   <span class="ruby-comment">#=&gt; "a-b-c"</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="join-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -4760,39 +4760,39 @@ rb_ary_join_m(int argc, VALUE *argv, VALUE ary)
 
     return rb_ary_join(ary, sep);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- join-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- join-method -->
-      
+
         <div id="keep_if-method" class="method-detail ">
           <a name="method-i-keep_if"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">keep_if { |item| block } → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">keep_if                  → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Deletes every element of <code>self</code> for which the given block
 evaluates to <code>false</code>.</p>
 
@@ -4804,9 +4804,9 @@ returned instead.</p>
 <pre class="ruby"><span class="ruby-identifier">a</span> = <span class="ruby-node">%w{ a b c d e f }</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">keep_if</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/[aeiou]/</span> }  <span class="ruby-comment">#=&gt; ["a", "e"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="keep_if-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -4816,39 +4816,39 @@ rb_ary_keep_if(VALUE ary)
     rb_ary_select_bang(ary);
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- keep_if-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- keep_if-method -->
-      
+
         <div id="last-method" class="method-detail ">
           <a name="method-i-last"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">last     →  obj or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">last(n)  →  new_ary</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns the last element(s) of <code>self</code>. If the array is empty,
 the first form returns <code>nil</code>.</p>
 
@@ -4859,9 +4859,9 @@ effect.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">last</span>     <span class="ruby-comment">#=&gt; "z"</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">last</span>(<span class="ruby-value">2</span>)  <span class="ruby-comment">#=&gt; ["y", "z"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="last-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -4876,42 +4876,42 @@ rb_ary_last(int argc, const VALUE *argv, VALUE ary)
         return ary_take_first_or_last(argc, argv, ary, ARY_TAKE_LAST);
     }
 }
-            </pre> 
+            </pre>
             </div>
 <!-- last-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- last-method -->
-      
+
         <div id="length-method" class="method-detail ">
           <a name="method-i-length"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">length → int</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns the number of elements in <code>self</code>. May be zero.</p>
 
 <pre class="ruby">[ <span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span>, <span class="ruby-value">4</span>, <span class="ruby-value">5</span> ].<span class="ruby-identifier">length</span>   <span class="ruby-comment">#=&gt; 5</span>
 [].<span class="ruby-identifier">length</span>                  <span class="ruby-comment">#=&gt; 0</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="length-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -4920,43 +4920,43 @@ rb_ary_length(VALUE ary)
     long len = RARRAY_LEN(ary);
     return LONG2NUM(len);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- length-source -->
-            
+
           </div>
 
-          
+
           <div class="aliases">
             Also aliased as: <a href="Array.html#method-i-size">size</a>
           </div>
-          
 
-          
+
+
         </div>
 <!-- length-method -->
-      
+
         <div id="map-method" class="method-detail ">
           <a name="method-i-map"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">map     { |item| block }  → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">map                       → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Invokes the given block once for each element of <code>self</code>.</p>
 
 <p>Creates a new array containing the values returned by the block.</p>
@@ -4971,9 +4971,9 @@ returned instead.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">map</span>.<span class="ruby-identifier">with_index</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">i</span> } <span class="ruby-comment">#=&gt; ["", "b", "cc", "ddd"]</span>
 <span class="ruby-identifier">a</span>                                 <span class="ruby-comment">#=&gt; ["a", "b", "c", "d"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="map-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -4989,39 +4989,39 @@ rb_ary_collect(VALUE ary)
     }
     return collect;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- map-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- map-method -->
-      
+
         <div id="map-21-method" class="method-detail ">
           <a name="method-i-map-21"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">map!     {|item| block }   → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">map!                       → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Invokes the given block once for each element of <code>self</code>,
 replacing the element with the value returned by the block.</p>
 
@@ -5036,9 +5036,9 @@ returned instead.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">collect!</span>.<span class="ruby-identifier">with_index</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">i</span>] }
 <span class="ruby-identifier">a</span> <span class="ruby-comment">#=&gt;  ["", "b", "c!", "d!"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="map-21-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -5053,34 +5053,34 @@ rb_ary_collect_bang(VALUE ary)
     }
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- map-21-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- map-21-method -->
-      
+
         <div id="pack-method" class="method-detail ">
           <a name="method-i-pack"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">pack ( aTemplateString ) → aBinaryString</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Packs the contents of <em>arr</em> into a binary sequence according to the
 directives in <em>aTemplateString</em> (see the table below) Directives
 “A,'' “a,'' and “Z'' may be followed by a count,
@@ -5197,9 +5197,9 @@ Directive    |         | Meaning
    @         | ---     | moves to absolute position
    X         | ---     | back up a byte
    x         | ---     | null byte</pre>
-            
 
-            
+
+
             <div class="method-source-code" id="pack-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -5814,49 +5814,49 @@ pack_pack(VALUE ary, VALUE fmt)
     }
     return res;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- pack-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- pack-method -->
-      
+
         <div id="permutation-method" class="method-detail ">
           <a name="method-i-permutation"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">permutation { |p| block }          → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">permutation                        → Enumerator</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">permutation(n) { |p| block }       → ary</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">permutation(n)                     → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>When invoked with a block, yield all permutations of length <code>n</code>
 of the elements of the array, then return the array itself.</p>
 
@@ -5878,9 +5878,9 @@ returned instead.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">permutation</span>(<span class="ruby-value">0</span>).<span class="ruby-identifier">to_a</span> <span class="ruby-comment">#=&gt; [[]] # one permutation of length 0</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">permutation</span>(<span class="ruby-value">4</span>).<span class="ruby-identifier">to_a</span> <span class="ruby-comment">#=&gt; []   # no permutations of length 4</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="permutation-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -5920,39 +5920,39 @@ rb_ary_permutation(int argc, VALUE *argv, VALUE ary)
     }
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- permutation-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- permutation-method -->
-      
+
         <div id="pop-method" class="method-detail ">
           <a name="method-i-pop"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">pop    → obj or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">pop(n) → new_ary</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Removes the last element from <code>self</code> and returns it, or
 <code>nil</code> if the array is empty.</p>
 
@@ -5966,9 +5966,9 @@ the opposite effect.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">pop</span>(<span class="ruby-value">2</span>)  <span class="ruby-comment">#=&gt; ["b", "c"]</span>
 <span class="ruby-identifier">a</span>         <span class="ruby-comment">#=&gt; ["a"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="pop-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -5985,39 +5985,39 @@ rb_ary_pop_m(int argc, VALUE *argv, VALUE ary)
     ARY_INCREASE_LEN(ary, -RARRAY_LEN(result));
     return result;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- pop-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- pop-method -->
-      
+
         <div id="product-method" class="method-detail ">
           <a name="method-i-product"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">product(other_ary, ...)                → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">product(other_ary, ...) { |p| block }  → ary</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns an array of all combinations of elements from all arrays.</p>
 
 <p>The length of the returned array is the product of the length of
@@ -6033,9 +6033,9 @@ yield all combinations and return <code>self</code> instead.</p>
 [<span class="ruby-value">1</span>,<span class="ruby-value">2</span>].<span class="ruby-identifier">product</span>()            <span class="ruby-comment">#=&gt; [[1],[2]]</span>
 [<span class="ruby-value">1</span>,<span class="ruby-value">2</span>].<span class="ruby-identifier">product</span>([])          <span class="ruby-comment">#=&gt; []</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="product-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -6126,34 +6126,34 @@ done:
 
     return NIL_P(result) ? ary : result;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- product-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- product-method -->
-      
+
         <div id="push-method" class="method-detail ">
           <a name="method-i-push"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">push(obj, ... )   → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Append — Pushes the given object(s) on to the end of this array. This
 expression returns the array itself, so several appends may be chained
 together. See also <a href="Array.html#method-i-pop">#pop</a> for the
@@ -6165,9 +6165,9 @@ opposite effect.</p>
 [<span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span>,].<span class="ruby-identifier">push</span>(<span class="ruby-value">4</span>).<span class="ruby-identifier">push</span>(<span class="ruby-value">5</span>)
         <span class="ruby-comment">#=&gt; [1, 2, 3, 4, 5]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="push-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -6175,34 +6175,34 @@ rb_ary_push_m(int argc, VALUE *argv, VALUE ary)
 {
     return rb_ary_cat(ary, argv, argc);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- push-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- push-method -->
-      
+
         <div id="rassoc-method" class="method-detail ">
           <a name="method-i-rassoc"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">rassoc(obj) → element_ary or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Searches through the array whose elements are also arrays.</p>
 
 <p>Compares <code>obj</code> with the second element of each contained array
@@ -6216,9 +6216,9 @@ using <code>obj.==</code>.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">rassoc</span>(<span class="ruby-string">"two"</span>)    <span class="ruby-comment">#=&gt; [2, "two"]</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">rassoc</span>(<span class="ruby-string">"four"</span>)   <span class="ruby-comment">#=&gt; nil</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="rassoc-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -6236,39 +6236,39 @@ rb_ary_rassoc(VALUE ary, VALUE value)
     }
     return Qnil;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- rassoc-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- rassoc-method -->
-      
+
         <div id="reject-method" class="method-detail ">
           <a name="method-i-reject"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">reject  {|item| block }  → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">reject                   → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns a new array containing the items in <code>self</code> for which the
 given block is not <code>true</code>. The ordering of non-rejected elements
 is maintained.</p>
@@ -6277,9 +6277,9 @@ is maintained.</p>
 
 <p>If no block is given, an <a href="Enumerator.html">Enumerator</a> is
 returned instead.</p>
-            
 
-            
+
+
             <div class="method-source-code" id="reject-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -6292,39 +6292,39 @@ rb_ary_reject(VALUE ary)
     ary_reject(ary, rejected_ary);
     return rejected_ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- reject-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- reject-method -->
-      
+
         <div id="reject-21-method" class="method-detail ">
           <a name="method-i-reject-21"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">reject! { |item| block }  → ary or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">reject!                   → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Deletes every element of <code>self</code> for which the block evaluates to
 <code>true</code>, if no changes were made returns <code>nil</code>.</p>
 
@@ -6335,9 +6335,9 @@ and <a href="Array.html#method-i-delete_if">#delete_if</a>.</p>
 
 <p>If no block is given, an <a href="Enumerator.html">Enumerator</a> is
 returned instead.</p>
-            
 
-            
+
+
             <div class="method-source-code" id="reject-21-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -6346,39 +6346,39 @@ rb_ary_reject_bang(VALUE ary)
     RETURN_SIZED_ENUMERATOR(ary, 0, 0, ary_enum_length);
     return ary_reject_bang(ary);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- reject-21-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- reject-21-method -->
-      
+
         <div id="repeated_combination-method" class="method-detail ">
           <a name="method-i-repeated_combination"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">repeated_combination(n) { |c| block } → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">repeated_combination(n)               → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>When invoked with a block, yields all repeated combinations of length
 <code>n</code> of elements from the array and then returns the array
 itself.</p>
@@ -6401,9 +6401,9 @@ returned instead.</p>
                                 <span class="ruby-comment">#    [2,2,2,2],[2,2,2,3],[2,2,3,3],[2,3,3,3],[3,3,3,3]]</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">repeated_combination</span>(<span class="ruby-value">0</span>).<span class="ruby-identifier">to_a</span>  <span class="ruby-comment">#=&gt; [[]] # one combination of length 0</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="repeated_combination-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -6440,39 +6440,39 @@ rb_ary_repeated_combination(VALUE ary, VALUE num)
     }
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- repeated_combination-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- repeated_combination-method -->
-      
+
         <div id="repeated_permutation-method" class="method-detail ">
           <a name="method-i-repeated_permutation"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">repeated_permutation(n) { |p| block } → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">repeated_permutation(n)               → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>When invoked with a block, yield all repeated permutations of length
 <code>n</code> of the elements of the array, then return the array itself.</p>
 
@@ -6491,9 +6491,9 @@ returned instead.</p>
                                 <span class="ruby-comment">#    [2,1,1],[2,1,2],[2,2,1],[2,2,2]]</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">repeated_permutation</span>(<span class="ruby-value">0</span>).<span class="ruby-identifier">to_a</span>  <span class="ruby-comment">#=&gt; [[]] # one permutation of length 0</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="repeated_permutation-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -6528,34 +6528,34 @@ rb_ary_repeated_permutation(VALUE ary, VALUE num)
     }
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- repeated_permutation-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- repeated_permutation-method -->
-      
+
         <div id="replace-method" class="method-detail ">
           <a name="method-i-replace"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">replace(other_ary)  → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Replaces the contents of <code>self</code> with the contents of
 <code>other_ary</code>, truncating or expanding if necessary.</p>
 
@@ -6563,9 +6563,9 @@ rb_ary_repeated_permutation(VALUE ary, VALUE num)
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">replace</span>([ <span class="ruby-string">"x"</span>, <span class="ruby-string">"y"</span>, <span class="ruby-string">"z"</span> ])   <span class="ruby-comment">#=&gt; ["x", "y", "z"]</span>
 <span class="ruby-identifier">a</span>                              <span class="ruby-comment">#=&gt; ["x", "y", "z"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="replace-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -6607,43 +6607,43 @@ rb_ary_replace(VALUE copy, VALUE orig)
     }
     return copy;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- replace-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- replace-method -->
-      
+
         <div id="reverse-method" class="method-detail ">
           <a name="method-i-reverse"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">reverse    → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns a new array containing <code>self</code>'s elements in reverse
 order.</p>
 
 <pre class="ruby">[ <span class="ruby-string">"a"</span>, <span class="ruby-string">"b"</span>, <span class="ruby-string">"c"</span> ].<span class="ruby-identifier">reverse</span>   <span class="ruby-comment">#=&gt; ["c", "b", "a"]</span>
 [ <span class="ruby-value">1</span> ].<span class="ruby-identifier">reverse</span>               <span class="ruby-comment">#=&gt; [1]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="reverse-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -6660,43 +6660,43 @@ rb_ary_reverse_m(VALUE ary)
     ARY_SET_LEN(dup, RARRAY_LEN(ary));
     return dup;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- reverse-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- reverse-method -->
-      
+
         <div id="reverse-21-method" class="method-detail ">
           <a name="method-i-reverse-21"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">reverse!   → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Reverses <code>self</code> in place.</p>
 
 <pre class="ruby"><span class="ruby-identifier">a</span> = [ <span class="ruby-string">"a"</span>, <span class="ruby-string">"b"</span>, <span class="ruby-string">"c"</span> ]
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">reverse!</span>       <span class="ruby-comment">#=&gt; ["c", "b", "a"]</span>
 <span class="ruby-identifier">a</span>                <span class="ruby-comment">#=&gt; ["c", "b", "a"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="reverse-21-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -6704,39 +6704,39 @@ rb_ary_reverse_bang(VALUE ary)
 {
     return rb_ary_reverse(ary);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- reverse-21-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- reverse-21-method -->
-      
+
         <div id="reverse_each-method" class="method-detail ">
           <a name="method-i-reverse_each"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">reverse_each { |item| block }  → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">reverse_each                   → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Same as <a href="Array.html#method-i-each">#each</a>, but traverses
 <code>self</code> in reverse order.</p>
 
@@ -6748,9 +6748,9 @@ rb_ary_reverse_bang(VALUE ary)
 
 <pre class="ruby"><span class="ruby-identifier">c</span> <span class="ruby-identifier">b</span> <span class="ruby-identifier">a</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="reverse_each-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -6770,44 +6770,44 @@ rb_ary_reverse_each(VALUE ary)
     }
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- reverse_each-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- reverse_each-method -->
-      
+
         <div id="rindex-method" class="method-detail ">
           <a name="method-i-rindex"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">rindex(obj)             →  int or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">rindex { |item| block } →  int or nil</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">rindex                  →  Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns the <em>index</em> of the last object in <code>self</code>
 <code>==</code> to <code>obj</code>.</p>
 
@@ -6826,9 +6826,9 @@ from the last object.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">rindex</span>(<span class="ruby-string">"z"</span>)             <span class="ruby-comment">#=&gt; nil</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">rindex</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-string">"b"</span> } <span class="ruby-comment">#=&gt; 3</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="rindex-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -6871,34 +6871,34 @@ rb_ary_rindex(int argc, VALUE *argv, VALUE ary)
     }
     return Qnil;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- rindex-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- rindex-method -->
-      
+
         <div id="rotate-method" class="method-detail ">
           <a name="method-i-rotate"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">rotate(count=1)    → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns a new array by rotating <code>self</code> so that the element at
 <code>count</code> is the first element of the new array.</p>
 
@@ -6912,9 +6912,9 @@ is the last element.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">rotate</span>(<span class="ruby-value">2</span>)      <span class="ruby-comment">#=&gt; ["c", "d", "a", "b"]</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">rotate</span>(<span class="ruby-value">-3</span>)     <span class="ruby-comment">#=&gt; ["b", "c", "d", "a"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="rotate-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -6942,34 +6942,34 @@ rb_ary_rotate_m(int argc, VALUE *argv, VALUE ary)
     ARY_SET_LEN(rotated, RARRAY_LEN(ary));
     return rotated;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- rotate-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- rotate-method -->
-      
+
         <div id="rotate-21-method" class="method-detail ">
           <a name="method-i-rotate-21"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">rotate!(count=1)   → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Rotates <code>self</code> in place so that the element at
 <code>count</code> comes first, and returns <code>self</code>.</p>
 
@@ -6983,9 +6983,9 @@ last element.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">rotate!</span>(<span class="ruby-value">2</span>)     <span class="ruby-comment">#=&gt; ["d", "a", "b", "c"]</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">rotate!</span>(<span class="ruby-value">-3</span>)    <span class="ruby-comment">#=&gt; ["a", "b", "c", "d"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="rotate-21-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -7001,49 +7001,49 @@ rb_ary_rotate_bang(int argc, VALUE *argv, VALUE ary)
     rb_ary_rotate(ary, n);
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- rotate-21-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- rotate-21-method -->
-      
+
         <div id="sample-method" class="method-detail ">
           <a name="method-i-sample"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">sample                  → obj</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">sample(random: rng)     → obj</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">sample(n)               → new_ary</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">sample(n, random: rng)  → new_ary</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Choose a random element or <code>n</code> random elements from the array.</p>
 
 <p>The elements are chosen by using random and unique indices into the array
@@ -7060,9 +7060,9 @@ generator.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">sample</span>         <span class="ruby-comment">#=&gt; 7</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">sample</span>(<span class="ruby-value">4</span>)      <span class="ruby-comment">#=&gt; [6, 4, 2, 5]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="sample-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -7168,39 +7168,39 @@ rb_ary_sample(int argc, VALUE *argv, VALUE ary)
 
     return result;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- sample-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- sample-method -->
-      
+
         <div id="select-method" class="method-detail ">
           <a name="method-i-select"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">select { |item| block } → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">select                  → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns a new array containing all elements of <code>ary</code> for which
 the given <code>block</code> returns a true value.</p>
 
@@ -7214,9 +7214,9 @@ returned instead.</p>
 </pre>
 
 <p>See also <a href="Enumerable.html#method-i-select">Enumerable#select</a>.</p>
-            
 
-            
+
+
             <div class="method-source-code" id="select-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -7234,39 +7234,39 @@ rb_ary_select(VALUE ary)
     }
     return result;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- select-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- select-method -->
-      
+
         <div id="select-21-method" class="method-detail ">
           <a name="method-i-select-21"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">select!  {|item| block } → ary or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">select!                  → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Invokes the given block passing in successive elements from
 <code>self</code>, deleting elements for which the block returns a
 <code>false</code> value.</p>
@@ -7280,9 +7280,9 @@ returns <code>nil</code>.</p>
 
 <p>If no block is given, an <a href="Enumerator.html">Enumerator</a> is
 returned instead.</p>
-            
 
-            
+
+
             <div class="method-source-code" id="select-21-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -7297,39 +7297,39 @@ rb_ary_select_bang(VALUE ary)
     args.len[0] = args.len[1] = 0;
     return rb_ensure(select_bang_i, (VALUE)&amp;args, select_bang_ensure, (VALUE)&amp;args);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- select-21-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- select-21-method -->
-      
+
         <div id="shift-method" class="method-detail ">
           <a name="method-i-shift"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">shift    → obj or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">shift(n) → new_ary</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Removes the first element of <code>self</code> and returns it (shifting all
 other elements down by one). Returns <code>nil</code> if the array is
 empty.</p>
@@ -7347,9 +7347,9 @@ including what was shifted to <code>new_ary</code>. See also <a href="Array.html
 <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>(<span class="ruby-value">2</span>)  <span class="ruby-comment">#=&gt; ["-m", "-q"]</span>
 <span class="ruby-identifier">args</span>           <span class="ruby-comment">#=&gt; ["filename"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="shift-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -7387,39 +7387,39 @@ rb_ary_shift_m(int argc, VALUE *argv, VALUE ary)
 
     return result;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- shift-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- shift-method -->
-      
+
         <div id="shuffle-method" class="method-detail ">
           <a name="method-i-shuffle"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">shuffle              → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">shuffle(random: rng) → new_ary</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns a new array with elements of <code>self</code> shuffled.</p>
 
 <pre class="ruby"><span class="ruby-identifier">a</span> = [ <span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span> ]           <span class="ruby-comment">#=&gt; [1, 2, 3]</span>
@@ -7432,9 +7432,9 @@ generator.</p>
 
 <pre class="ruby"><span class="ruby-identifier">a</span>.<span class="ruby-identifier">shuffle</span>(<span class="ruby-value">random:</span> <span class="ruby-constant">Random</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>))  <span class="ruby-comment">#=&gt; [1, 3, 2]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="shuffle-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -7444,39 +7444,39 @@ rb_ary_shuffle(int argc, VALUE *argv, VALUE ary)
     rb_ary_shuffle_bang(argc, argv, ary);
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- shuffle-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- shuffle-method -->
-      
+
         <div id="shuffle-21-method" class="method-detail ">
           <a name="method-i-shuffle-21"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">shuffle!              → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">shuffle!(random: rng) → ary</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Shuffles elements in <code>self</code> in place.</p>
 
 <pre class="ruby"><span class="ruby-identifier">a</span> = [ <span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span> ]           <span class="ruby-comment">#=&gt; [1, 2, 3]</span>
@@ -7489,9 +7489,9 @@ generator.</p>
 
 <pre class="ruby"><span class="ruby-identifier">a</span>.<span class="ruby-identifier">shuffle!</span>(<span class="ruby-value">random:</span> <span class="ruby-constant">Random</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>))  <span class="ruby-comment">#=&gt; [1, 3, 2]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="shuffle-21-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -7527,72 +7527,72 @@ rb_ary_shuffle_bang(int argc, VALUE *argv, VALUE ary)
     }); /* WB: no new reference */
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- shuffle-21-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- shuffle-21-method -->
-      
+
         <div id="size-method" class="method-detail method-alias">
           <a name="method-i-size"></a>
 
-          
+
           <div class="method-heading">
             <span class="method-name">size</span><span class="method-args">()</span>
             <span class="method-click-advice">click to toggle source</span>
           </div>
-          
-          <div>
-  
-            
-            
-            
 
-            
+          <div>
+
+
+
+
+
+
           </div>
 
-          
 
-          
+
+
           <div class="aliases">
             Alias for: <a href="Array.html#method-i-length">length</a>
           </div>
-          
+
         </div>
 <!-- size-method -->
-      
+
         <div id="slice-method" class="method-detail ">
           <a name="method-i-slice"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">slice(index)          → obj     or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">slice(start, length)  → new_ary or nil</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">slice(range)          → new_ary or nil</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Element Reference — Returns the element at <code>index</code>, or returns a
 subarray starting at the <code>start</code> index and continuing for
 <code>length</code> elements, or returns a subarray specified by
@@ -7619,9 +7619,9 @@ when the starting index for an element range is at the end of the array.</p>
 <span class="ruby-identifier">a</span>[<span class="ruby-value">5</span>, <span class="ruby-value">1</span>]                <span class="ruby-comment">#=&gt; []</span>
 <span class="ruby-identifier">a</span>[<span class="ruby-value">5</span><span class="ruby-operator">..</span><span class="ruby-value">10</span>]               <span class="ruby-comment">#=&gt; []</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="slice-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -7657,44 +7657,44 @@ rb_ary_aref(int argc, const VALUE *argv, VALUE ary)
     }
     return rb_ary_entry(ary, NUM2LONG(arg));
 }
-            </pre> 
+            </pre>
             </div>
 <!-- slice-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- slice-method -->
-      
+
         <div id="slice-21-method" class="method-detail ">
           <a name="method-i-slice-21"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">slice!(index)         → obj or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">slice!(start, length) → new_ary or nil</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">slice!(range)         → new_ary or nil</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Deletes the element(s) given by an <code>index</code> (optionally up to
 <code>length</code> elements) or by a <code>range</code>.</p>
 
@@ -7709,9 +7709,9 @@ rb_ary_aref(int argc, const VALUE *argv, VALUE ary)
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-value">100</span>)   <span class="ruby-comment">#=&gt; nil</span>
 <span class="ruby-identifier">a</span>               <span class="ruby-comment">#=&gt; ["a"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="slice-21-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -7764,39 +7764,39 @@ rb_ary_slice_bang(int argc, VALUE *argv, VALUE ary)
 
     return rb_ary_delete_at(ary, NUM2LONG(arg1));
 }
-            </pre> 
+            </pre>
             </div>
 <!-- slice-21-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- slice-21-method -->
-      
+
         <div id="sort-method" class="method-detail ">
           <a name="method-i-sort"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">sort                   → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">sort { |a, b| block }  → new_ary</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns a new array created by sorting <code>self</code>.</p>
 
 <p>Comparisons for the sort will be done using the <code>&lt;=&gt;</code>
@@ -7814,9 +7814,9 @@ follows <code>a</code>, <code>0</code> when <code>a</code> and
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">sort</span>                    <span class="ruby-comment">#=&gt; ["a", "b", "c", "d", "e"]</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">sort</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span><span class="ruby-operator">|</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">x</span> }  <span class="ruby-comment">#=&gt; ["e", "d", "c", "b", "a"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="sort-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -7826,39 +7826,39 @@ rb_ary_sort(VALUE ary)
     rb_ary_sort_bang(ary);
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- sort-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- sort-method -->
-      
+
         <div id="sort-21-method" class="method-detail ">
           <a name="method-i-sort-21"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">sort!                   → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">sort! { |a, b| block }  → ary</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Sorts <code>self</code> in place.</p>
 
 <p>Comparisons for the sort will be done using the <code>&lt;=&gt;</code>
@@ -7876,9 +7876,9 @@ follows <code>a</code>, <code>0</code> when <code>a</code> and
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">sort!</span>                    <span class="ruby-comment">#=&gt; ["a", "b", "c", "d", "e"]</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">sort!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span><span class="ruby-operator">|</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">x</span> }  <span class="ruby-comment">#=&gt; ["e", "d", "c", "b", "a"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="sort-21-source">
               <pre> <!-- method.markup_code 290 -->
                VALUE
@@ -7940,47 +7940,47 @@ rb_ary_sort_bang(VALUE ary)
     }
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- sort-21-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- sort-21-method -->
-      
+
         <div id="sort_by-21-method" class="method-detail ">
           <a name="method-i-sort_by-21"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">sort_by! { |obj| block }    → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">sort_by!                    → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Sorts <code>self</code> in place using a set of keys generated by mapping
 the values in <code>self</code> through the given block.</p>
 
 <p>If no block is given, an <a href="Enumerator.html">Enumerator</a> is
 returned instead.</p>
-            
 
-            
+
+
             <div class="method-source-code" id="sort_by-21-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -7994,34 +7994,34 @@ rb_ary_sort_by_bang(VALUE ary)
     rb_ary_replace(ary, sorted);
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- sort_by-21-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- sort_by-21-method -->
-      
+
         <div id="take-method" class="method-detail ">
           <a name="method-i-take"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">take(n)               → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns first <code>n</code> elements from the array.</p>
 
 <p>If a negative number is given, raises an <a href="ArgumentError.html">ArgumentError</a>.</p>
@@ -8031,9 +8031,9 @@ rb_ary_sort_by_bang(VALUE ary)
 <pre class="ruby"><span class="ruby-identifier">a</span> = [<span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span>, <span class="ruby-value">4</span>, <span class="ruby-value">5</span>, <span class="ruby-value">0</span>]
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">take</span>(<span class="ruby-value">3</span>)             <span class="ruby-comment">#=&gt; [1, 2, 3]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="take-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -8045,39 +8045,39 @@ rb_ary_take(VALUE obj, VALUE n)
     }
     return rb_ary_subseq(obj, 0, len);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- take-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- take-method -->
-      
+
         <div id="take_while-method" class="method-detail ">
           <a name="method-i-take_while"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">take_while { |obj| block }  → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">take_while                  → Enumerator</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Passes elements to the block until the block returns <code>nil</code> or
 <code>false</code>, then stops iterating and returns an array of all prior
 elements.</p>
@@ -8090,9 +8090,9 @@ returned instead.</p>
 <pre class="ruby"><span class="ruby-identifier">a</span> = [<span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span>, <span class="ruby-value">4</span>, <span class="ruby-value">5</span>, <span class="ruby-value">0</span>]
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">take_while</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span> }  <span class="ruby-comment">#=&gt; [1, 2]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="take_while-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -8106,41 +8106,41 @@ rb_ary_take_while(VALUE ary)
     }
     return rb_ary_take(ary, LONG2FIX(i));
 }
-            </pre> 
+            </pre>
             </div>
 <!-- take_while-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- take_while-method -->
-      
+
         <div id="to_a-method" class="method-detail ">
           <a name="method-i-to_a"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">to_a     → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns <code>self</code>.</p>
 
 <p>If called on a subclass of <a href="Array.html">Array</a>, converts the
 receiver to an <a href="Array.html">Array</a> object.</p>
-            
 
-            
+
+
             <div class="method-source-code" id="to_a-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -8153,38 +8153,38 @@ rb_ary_to_a(VALUE ary)
     }
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- to_a-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- to_a-method -->
-      
+
         <div id="to_ary-method" class="method-detail ">
           <a name="method-i-to_ary"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">to_ary → ary</span>
-            
-            <span class="method-click-advice">click to toggle source</span>
-            
-          </div>
-          
-          
-          <div>
-  
-            
-            <p>Returns <code>self</code>.</p>
-            
 
-            
+            <span class="method-click-advice">click to toggle source</span>
+
+          </div>
+
+
+          <div>
+
+
+            <p>Returns <code>self</code>.</p>
+
+
+
             <div class="method-source-code" id="to_ary-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -8192,43 +8192,43 @@ rb_ary_to_ary_m(VALUE ary)
 {
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- to_ary-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- to_ary-method -->
-      
+
         <div id="to_h-method" class="method-detail ">
           <a name="method-i-to_h"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">to_h     → hash</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns the result of interpreting <em>ary</em> as an array of <code>[key,
 value]</code> pairs.</p>
 
 <pre class="ruby">[[<span class="ruby-value">:foo</span>, <span class="ruby-value">:bar</span>], [<span class="ruby-value">1</span>, <span class="ruby-value">2</span>]].<span class="ruby-identifier">to_h</span>
   <span class="ruby-comment"># =&gt; {:foo =&gt; :bar, 1 =&gt; 2}</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="to_h-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -8251,62 +8251,62 @@ rb_ary_to_h(VALUE ary)
     }
     return hash;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- to_h-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- to_h-method -->
-      
+
         <div id="to_s-method" class="method-detail method-alias">
           <a name="method-i-to_s"></a>
 
-          
+
           <div class="method-heading">
             <span class="method-name">to_s</span><span class="method-args">()</span>
             <span class="method-click-advice">click to toggle source</span>
           </div>
-          
-          <div>
-  
-            
-            
-            
 
-            
+          <div>
+
+
+
+
+
+
           </div>
 
-          
 
-          
+
+
           <div class="aliases">
             Alias for: <a href="Array.html#method-i-inspect">inspect</a>
           </div>
-          
+
         </div>
 <!-- to_s-method -->
-      
+
         <div id="transpose-method" class="method-detail ">
           <a name="method-i-transpose"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">transpose → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Assumes that <code>self</code> is an array of arrays and transposes the
 rows and columns.</p>
 
@@ -8315,9 +8315,9 @@ rows and columns.</p>
 </pre>
 
 <p>If the length of the subarrays don't match, an <a href="IndexError.html">IndexError</a> is raised.</p>
-            
 
-            
+
+
             <div class="method-source-code" id="transpose-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -8347,39 +8347,39 @@ rb_ary_transpose(VALUE ary)
     }
     return result;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- transpose-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- transpose-method -->
-      
+
         <div id="uniq-method" class="method-detail ">
           <a name="method-i-uniq"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">uniq                → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">uniq { |item| ... } → new_ary</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns a new array by removing duplicate values in <code>self</code>.</p>
 
 <p>If a block is given, it will use the return value of the block for
@@ -8396,9 +8396,9 @@ and <a href="Array.html#method-i-eql-3F">eql?</a> methods for efficiency.</p>
 <span class="ruby-identifier">b</span> = [[<span class="ruby-string">"student"</span>,<span class="ruby-string">"sam"</span>], [<span class="ruby-string">"student"</span>,<span class="ruby-string">"george"</span>], [<span class="ruby-string">"teacher"</span>,<span class="ruby-string">"matz"</span>]]
 <span class="ruby-identifier">b</span>.<span class="ruby-identifier">uniq</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">first</span> } <span class="ruby-comment"># =&gt; [["student", "sam"], ["teacher", "matz"]]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="uniq-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -8421,39 +8421,39 @@ rb_ary_uniq(VALUE ary)
 
     return uniq;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- uniq-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- uniq-method -->
-      
+
         <div id="uniq-21-method" class="method-detail ">
           <a name="method-i-uniq-21"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">uniq!                → ary or nil</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">uniq! { |item| ... } → ary or nil</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Removes duplicate elements from <code>self</code>.</p>
 
 <p>If a block is given, it will use the return value of the block for
@@ -8476,9 +8476,9 @@ found).</p>
 <span class="ruby-identifier">c</span> = [[<span class="ruby-string">"student"</span>,<span class="ruby-string">"sam"</span>], [<span class="ruby-string">"student"</span>,<span class="ruby-string">"george"</span>], [<span class="ruby-string">"teacher"</span>,<span class="ruby-string">"matz"</span>]]
 <span class="ruby-identifier">c</span>.<span class="ruby-identifier">uniq!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">first</span> } <span class="ruby-comment"># =&gt; [["student", "sam"], ["teacher", "matz"]]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="uniq-21-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -8511,34 +8511,34 @@ rb_ary_uniq_bang(VALUE ary)
 
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- uniq-21-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- uniq-21-method -->
-      
+
         <div id="unshift-method" class="method-detail ">
           <a name="method-i-unshift"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">unshift(obj, ...)  → ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Prepends objects to the front of <code>self</code>, moving other elements
 upwards. See also <a href="Array.html#method-i-shift">#shift</a> for the
 opposite effect.</p>
@@ -8547,9 +8547,9 @@ opposite effect.</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-string">"a"</span>)   <span class="ruby-comment">#=&gt; ["a", "b", "c", "d"]</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>)  <span class="ruby-comment">#=&gt; [ 1, 2, "a", "b", "c", "d"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="unshift-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -8568,34 +8568,34 @@ rb_ary_unshift_m(int argc, VALUE *argv, VALUE ary)
     ARY_SET_LEN(ary, len + argc);
     return ary;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- unshift-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- unshift-method -->
-      
+
         <div id="values_at-method" class="method-detail ">
           <a name="method-i-values_at"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">values_at(selector, ...)  → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Returns an array containing the elements in <code>self</code> corresponding
 to the given <code>selector</code>(s).</p>
 
@@ -8609,9 +8609,9 @@ to the given <code>selector</code>(s).</p>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">values_at</span>(<span class="ruby-value">-1</span>, <span class="ruby-value">-2</span>, <span class="ruby-value">-2</span>, <span class="ruby-value">-7</span>)   <span class="ruby-comment"># =&gt; ["f", "e", "e", nil]</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">values_at</span>(<span class="ruby-value">4</span><span class="ruby-operator">..</span><span class="ruby-value">6</span>, <span class="ruby-value">3</span><span class="ruby-operator">...</span><span class="ruby-value">6</span>)      <span class="ruby-comment"># =&gt; ["e", "f", nil, "d", "e", "f"]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="values_at-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -8619,39 +8619,39 @@ rb_ary_values_at(int argc, VALUE *argv, VALUE ary)
 {
     return rb_get_values_at(ary, RARRAY_LEN(ary), argc, argv, rb_ary_entry);
 }
-            </pre> 
+            </pre>
             </div>
 <!-- values_at-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- values_at-method -->
-      
+
         <div id="zip-method" class="method-detail ">
           <a name="method-i-zip"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">zip(arg, ...)                  → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
+
           <div class="method-heading">
             <span class="method-callseq">zip(arg, ...) { |arr| block }  → nil</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Converts any arguments to arrays, then merges elements of <code>self</code>
 with corresponding elements from each argument.</p>
 
@@ -8670,9 +8670,9 @@ otherwise an array of arrays is returned.</p>
 [<span class="ruby-value">1</span>, <span class="ruby-value">2</span>].<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>)      <span class="ruby-comment">#=&gt; [[1, 4, 7], [2, 5, 8]]</span>
 <span class="ruby-identifier">a</span>.<span class="ruby-identifier">zip</span>([<span class="ruby-value">1</span>, <span class="ruby-value">2</span>], [<span class="ruby-value">8</span>])    <span class="ruby-comment">#=&gt; [[4, 1, 8], [5, 2, nil], [6, nil, nil]]</span>
 </pre>
-            
 
-            
+
+
             <div class="method-source-code" id="zip-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -8732,34 +8732,34 @@ rb_ary_zip(int argc, VALUE *argv, VALUE ary)
 
     return result;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- zip-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- zip-method -->
-      
+
         <div id="7C-method" class="method-detail ">
           <a name="method-i-7C"></a>
 
-          
-          
+
+
           <div class="method-heading">
             <span class="method-callseq">ary | other_ary     → new_ary</span>
-            
+
             <span class="method-click-advice">click to toggle source</span>
-            
+
           </div>
-          
-          
+
+
           <div>
-  
-            
+
+
             <p>Set Union — Returns a new array by joining <code>ary</code> with
 <code>other_ary</code>, excluding any duplicates and preserving the order
 from the original array.</p>
@@ -8770,9 +8770,9 @@ from the original array.</p>
 </pre>
 
 <p>See also <a href="Array.html#method-i-uniq">#uniq</a>.</p>
-            
 
-            
+
+
             <div class="method-source-code" id="7C-source">
               <pre> <!-- method.markup_code 290 -->
                static VALUE
@@ -8794,52 +8794,52 @@ rb_ary_or(VALUE ary1, VALUE ary2)
     ary_recycle_hash(hash);
     return ary3;
 }
-            </pre> 
+            </pre>
             </div>
 <!-- 7C-source -->
-            
+
           </div>
 
-          
 
-          
+
+
         </div>
 <!-- 7C-method -->
-      
+
       </div>
 <!-- public-instance-method-details -->
-    
+
     </div>
 <!-- 5Buntitled-5D -->
-  
+
   <div id="tx_Array_versioned" class="associated_wrapper"></div>
 <script type="text/javascript">$("#tx_Array_versioned").load("/associated/2.3.1/Array.ihtml");</script> <div id="tx_Array" class="associated_wrapper"></div>
-<script type="text/javascript">$("#tx_Array").load("/associated/Array.ihtml");</script> 
-      
-  <!-- dsqus ? -->
-     
+<script type="text/javascript">$("#tx_Array").load("/associated/Array.ihtml");</script>
 
-  
+  <!-- dsqus ? -->
+
+
+
   </div>
 <!-- documentation -->
   <div id="dynamic">
   </div>
-      
-          
 
-      
+
+
+
 <div class="grids wrapper" id="footer">
-  <p><small>This page was generated for Ruby 2.3.1</small></p> 
-  
+  <p><small>This page was generated for Ruby 2.3.1</small></p>
+
    <p><a href="http://ruby-doc.org">Ruby-doc.org</a> is a service of <a href="http://jamesbritt.com">James Britt</a> and <a href="http://neurogami.com">Neurogami</a>, an erratic source of art, music, and technology.  </p>
 <div class="oio-inline">
 <ins data-revive-zoneid="1" data-revive-id="58924a5717c091dfee6dda3f7d38c4d7"></ins><script async src="//ras.ruby-doc.org/vvv/delivery/thesinkjs.php"></script>
 </div>
- 
+
        <p><small>Generated with Ruby-doc Rdoc Generator 0.42.0</small>.</p>
   </div>
 </div>
-  
+
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -8852,7 +8852,7 @@ rb_ary_or(VALUE ary1, VALUE ary2)
 </script>
 
 
-    
+
  <script type="text/javascript">
 $(document).ready(function() {
       $.ajaxSetup({ cache: false });
@@ -8862,14 +8862,14 @@ $(document).ready(function() {
     </script>
 
 
- 
+
 		<script type="text/javascript">
 
 	function loadPlus(plusdocs){
 			$(plusdocs).find("div[class='associated_wrapper']").each (function() {
 					$("#" + this.id).append($(plusdocs).find("#" + this.id ));
 					});
-	} 
+	}
 
    //function loadInline(json){
    // for (var lookFor in json) {
@@ -8880,7 +8880,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 		$.ajaxSetup({ cache: false });
-			$.get('/associated/2.3.1/plus_Array.ihtml', 
+			$.get('/associated/2.3.1/plus_Array.ihtml',
 			function(plusdocs) {
 			setTimeout(function() {
 				loadPlus(plusdocs);
@@ -8901,6 +8901,6 @@ $(document).ready(function() {
 
 		});
 </script>
-		
+
 </body>
 </html>

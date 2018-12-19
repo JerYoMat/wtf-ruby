@@ -1,5 +1,6 @@
 require_relative "../lib/scraper.rb"
 require_relative "../lib/class.rb"
+require_relative "../lib/method.rb"
 require 'nokogiri'
 require 'colorize'
 require 'pry'
@@ -9,7 +10,9 @@ class CommandLineInteface
   def run
     make_classes
     printf_class_list
-  
+    #this is where we would wait to collect user input lets assume the user selects array
+     Scraper.scrape_method_sections_from_class_page("Array")
+    #Scraper.scrape_methods("Array")
     #add_attributes_to_students change to add methods to classes
     #display_students
 
@@ -19,6 +22,12 @@ class CommandLineInteface
     class_list = Scraper.scrape_class
     Class.create_from_collection(class_list)
   end
+
+
+  def make_methods
+
+  end
+
 
   def printf_class_list
     counter = 0
