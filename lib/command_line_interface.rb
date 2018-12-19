@@ -24,13 +24,13 @@ class CommandLineInteface
 
   def printf_method_list(selected_class)
     counter = 0
-    rows = selected_class.methods.count/4
+    rows = selected_class.methods.count/3
     rows.ceil.times do
-      printf(" %2d.%-25s %2d.%-25s %2d.%-25s %2d.%-25s \n",
-        counter += 1, selected_class.methods[counter - 1].name,
+      printf(" %2d.%-25s %2d.%-25s %2d.%-25s \n",
         counter += 1, selected_class.methods[counter - 1].name,
         counter += 1, selected_class.methods[counter - 1].name,
         counter += 1, selected_class.methods[counter - 1].name)
+
     end
   end
 
@@ -52,8 +52,11 @@ class CommandLineInteface
     counter = 0
     rows = Class.all.count/4
     rows.ceil.times do
-      printf(" %2d.%-20s %2d.%-20s %2d.%-20s %2d.%-20s \n", counter + 1, Class.all[counter].name, counter + 2, Class.all[counter + 1].name, counter + 3, Class.all[counter + 2].name, counter + 4, Class.all[counter + 3].name)
-      counter += 4
+      printf(" %2d.%-15s %2d.%-15s %2d.%-15s %2d.%-15s \n",
+        counter += 1, Class.all[counter - 1].name,
+        counter += 1, Class.all[counter - 1].name,
+        counter += 1, Class.all[counter - 1].name,
+        counter += 1, Class.all[counter - 1].name)
     end
   end
 
