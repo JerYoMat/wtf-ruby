@@ -26,6 +26,14 @@ class Class
   end
 
 
+
+  def self.create_methods_for_all_classes
+    self.all.each do |ind_class|
+      ind_class.create_methods_for_instance_of_class
+    end
+  end
+
+
   def create_methods_for_instance_of_class
      method_names = Scraper.scrape_methods(@name)
      method_contents = Scraper.scrape_method_content_from_class_page(@name)

@@ -9,22 +9,20 @@ class CommandLineInteface
 
   def run
     make_classes
+    Class.create_methods_for_all_classes
     welcome_text
     first_choice = gets.strip
     if first_choice.include?(",")
       class_choice = first_choice.split(',')[0].strip
       selected_class = set_class(class_choice)
-      selected_class.create_methods_for_instance_of_class
       method_choice = first_choice.split(',')[1].strip
       display_method(selected_class, method_choice)
 
-
-    else 
+    else
       printf_class_list
       puts 'Please enter the name of the class for which you wish to view available methods:'
       class_choice= gets.strip
       selected_class = set_class(class_choice)
-      selected_class.create_methods_for_instance_of_class
       printf_method_list(selected_class)
       puts 'Please enter the method you wish to view:'
       method_choice = gets.strip
