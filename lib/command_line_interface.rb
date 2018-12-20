@@ -44,7 +44,7 @@ class CommandLineInteface
        printf("\t#{heading.colorize(:light_blue)}\n")
       end
       m_to_show.sample_code.each do |code|
-          line = code.colorize(:color => :white, :background => :gray)
+          line = code.colorize(:color => :white, :background => :green)
           printf("\t %-50s \n", line)
       end
 
