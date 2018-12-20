@@ -47,7 +47,6 @@ class CommandLineInteface
           line = code.colorize(:color => :white, :background => :green)
           printf("\t %-50s \n", line)
       end
-
   end
 
 

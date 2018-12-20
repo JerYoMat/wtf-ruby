@@ -2,7 +2,7 @@ require 'open-uri'
 require 'pry'
 require 'nokogiri'
 class Scraper
-     
+
       @@core_path = "./fixtures/ruby-doc-site/core-2_3_1"
       @@file_type = ".xml"
 
@@ -30,7 +30,7 @@ class Scraper
 
   def self.scrape_method_content_from_class_page(class_name)
    methods = []
-   method_link = @@core_path+"/#{class_name}+#{@@file_type}"
+   method_link = @@core_path+"/#{class_name}#{@@file_type}"
    method_page = Nokogiri::HTML(open(method_link))
      method_page.css(".method-detail").each do |section|
           method_hash = {}
