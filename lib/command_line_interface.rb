@@ -29,6 +29,10 @@ class CommandLineInteface
     display_method(selected_class, method_choice)
   end
 
+  def valid_class_name?(value)
+    set_class(value) ? true : false 
+  end
+
 
   def set_method(class_instance, chosen_method_name)
     class_instance.methods.select { |m| m.name == chosen_method_name}.first
