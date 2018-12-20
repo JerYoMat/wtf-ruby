@@ -18,11 +18,15 @@ class CommandLineInteface
   def run
     make_classes
     printf_class_list
+    puts 'Please enter the name of the class for which you wish to view available methods:'
+    class_choice= gets.strip
 #The user selects the class for which they would like to view the methods.
-    selected_class = set_class("Array")
+    selected_class = set_class(class_choice)
     selected_class.create_methods_for_instance_of_class
     printf_method_list(selected_class)
-    display_method(selected_class, "shuffle")
+    puts 'Please enter the method you wish to view:'
+    method_choice = gets.strip
+    display_method(selected_class, method_choice)
   end
 
 
