@@ -13,11 +13,11 @@ class CommandLineInteface
     welcome_text
     first_choice = gets.strip
     if first_choice.include?(",")
+      validate_first_choice_input(first_choice)
       class_choice = first_choice.split(',')[0].strip
       selected_class = set_class(class_choice)
       method_choice = first_choice.split(',')[1].strip
       display_method(selected_class, method_choice)
-
     else
       printf_class_list
       puts 'Please enter the name of the class for which you wish to view available methods:'
@@ -27,9 +27,20 @@ class CommandLineInteface
       puts 'Please enter the method you wish to view:'
       method_choice = gets.strip
       display_method(selected_class, method_choice)
-
     end
   end
+
+
+  def validate_first_choice_input(string)
+     if string.include?(',')
+       w_being_eval_for_class = string.split(',')[0].strip
+       w_being_eval_for_method = string.split(',')[1].strip
+      if set_class(w_being_eval_for_class)
+         'valid class'
+     end
+
+  end
+
 
 
 
@@ -41,21 +52,16 @@ class CommandLineInteface
 
 
 
-  def action_after_first_user_input(string)
-
-  end
-
-
   def set_method(class_instance, chosen_method_name)
     class_instance.methods.select { |m| m.name == chosen_method_name}.first
   end
-#YOU ARE HERE
+
+
   def display_method(class_instance, chosen_method_name)
       m_to_show = set_method(class_instance, chosen_method_name)
       puts ''
       puts '  Class: ' + class_instance.name.colorize(:mode => :bold) + ' Method: ' + m_to_show.name.colorize(:color => :red, :mode => :bold)
       printf("\t %s \n", m_to_show.mini_description.colorize(:mode => :italic))
-
       m_to_show.headings.each do |heading|
        printf("\t#{heading.colorize(:light_blue)}\n")
       end
@@ -77,8 +83,8 @@ class CommandLineInteface
     end
   end
 
-  def set_class(user_input)
-    Class.all.select { |c| c.name == user_input}.first
+  def set_class(string)
+    Class.all.select { |c| c.name == string}.first
   end
 
   def make_classes
