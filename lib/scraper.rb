@@ -35,7 +35,7 @@ class Scraper
      method_page.css(".method-detail").each do |section|
           method_hash = {}
           method_hash[:headings] =section.xpath("div [@class='method-heading'] / span").text
-          method_hash[:mini_description] = section.xpath("div / p[1]").text
+          method_hash[:mini_description] = section.xpath("div / p[1]").text.split("\n").join(' ')
           method_hash[:full_description] = section.xpath("div / p").text
           method_hash[:code] = section.css(".ruby").text.split("\n")
 
