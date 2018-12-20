@@ -5,28 +5,46 @@ require 'nokogiri'
 require 'colorize'
 require 'pry'
 class CommandLineInteface
-#Welcom User and provide prompt
-
-# IF No Arguments are entered, then show class list
-#If Class is provided then show method list
-#IF class and method are provided then go straight to method output
-
-
-
 
 
   def run
     make_classes
-    printf_class_list
-    puts 'Please enter the name of the class for which you wish to view available methods:'
-    class_choice= gets.strip
-#The user selects the class for which they would like to view the methods.
-    selected_class = set_class(class_choice)
-    selected_class.create_methods_for_instance_of_class
-    printf_method_list(selected_class)
-    puts 'Please enter the method you wish to view:'
-    method_choice = gets.strip
-    display_method(selected_class, method_choice)
+    welcome_text
+    first_choice = gets.strip
+    if first_choice.include?(",")
+      class_choice = first_choice.split(',')[0].strip
+      selected_class = set_class(class_choice)
+      selected_class.create_methods_for_instance_of_class
+      method_choice = first_choice.split(',')[1].strip
+      display_method(selected_class, method_choice)
+
+
+    else 
+      printf_class_list
+      puts 'Please enter the name of the class for which you wish to view available methods:'
+      class_choice= gets.strip
+      selected_class = set_class(class_choice)
+      selected_class.create_methods_for_instance_of_class
+      printf_method_list(selected_class)
+      puts 'Please enter the method you wish to view:'
+      method_choice = gets.strip
+      display_method(selected_class, method_choice)
+
+    end
+  end
+
+
+
+  def welcome_text
+    puts "Hello, welcome to what_dis_ruby?.  If you know the class and method that you wish to look up enter it in the following format:"
+    puts "Class_name, method"
+    puts "Othwerwise, hit enter"
+  end
+
+
+
+  def action_after_first_user_input(string)
+
   end
 
 
