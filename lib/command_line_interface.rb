@@ -13,13 +13,25 @@ class CommandLineInteface
       Class.create_methods_for_all_classes
       welcome_text
       first_choice = gets.strip
-      if first_choice.include?(",")
+      if validate_first_choice_input(first_choice) == { "valid class" => true, "valid method" => true, "inputs" => 2}
         class_choice = first_choice.split(',')[0].strip
         selected_class = set_class(class_choice)
         method_choice = first_choice.split(',')[1].strip
         display_method(selected_class, method_choice)
-
+      elsif validate_first_choice_input(first_choice) == { "valid class" => true, "valid method" => false, "inputs" => 1}
+        selected_class = set_class(first_choice)
+        printf_method_list(selected_class)
+        puts 'Please enter the method you wish to view:'
+        method_choice = gets.strip
+        display_method(selected_class, method_choice)
+      elsif validate_first_choice_input(first_choice) == { "valid class" => true, "valid method" => false, "inputs" => 2}
+        selected_class = set_class(first_choice.split(',')[0].strip)
+        printf_method_list(selected_class)
+        puts 'Please enter the method you wish to view:'
+        method_choice = gets.strip
+        display_method(selected_class, method_choice)
       else
+        puts "Hmmmm... I couldn't make sense of your input.  Let's try this" if first_choice != ''
         printf_class_list
         puts 'Please enter the name of the class for which you wish to view available methods:'
         class_choice= gets.strip
@@ -34,12 +46,15 @@ class CommandLineInteface
 
   #return a hash that identifies whether the user provided class and method are valid.
   def validate_first_choice_input(string)
-    inputs = { "valid class" => false, "valid method" => false }
+    inputs = { "valid class" => false, "valid method" => false, "inputs" => 0 }
     if set_class(string)
       inputs["valid class"] = true
+      inputs["inputs"] = 1
     elsif string.include?(',')
-      pot_class = string.split(',')[0].strip
-      pot_method = string.split(',')[1].strip
+      array = string.split(',')
+      pot_class = array[0].strip
+      pot_method = array[1].strip
+      inputs["inputs"] = array.count
       if set_class(pot_class)
         inputs["valid class"] = true
         if set_method(set_class(pot_class), pot_method)
