@@ -18,8 +18,6 @@ class CommandLineInteface
         selected_class = set_class(class_choice)
         method_choice = first_choice.split(',')[1].strip
         display_method(selected_class, method_choice)
-        t = validate_first_choice_input("String, length")
-        binding.pry
 
       else
         printf_class_list
