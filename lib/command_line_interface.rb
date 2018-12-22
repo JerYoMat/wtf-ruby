@@ -4,41 +4,53 @@ require_relative '../config/environment.rb'
 class CommandLineInteface
 
     def run
-    make_classes
-    Scraper.store_offline
-    Classy.create_methods_for_all_classes
-      welcome_text
-      first_choice = gets.strip
-      if validate_first_choice_input(first_choice) == { "valid class" => true, "valid method" => true, "inputs" => 2}
-        class_choice = first_choice.split(',')[0].strip
-        selected_class = set_class(class_choice)
-        method_choice = first_choice.split(',')[1].strip
-      elsif validate_first_choice_input(first_choice) == { "valid class" => true, "valid method" => false, "inputs" => 1}
-        selected_class = set_class(first_choice)
-        printf_method_list(selected_class)
-        puts 'Please enter the method you wish to view:'
-        method_choice = gets.strip
-      elsif validate_first_choice_input(first_choice) == { "valid class" => true, "valid method" => false, "inputs" => 2}
-        selected_class = set_class(first_choice.split(',')[0].strip)
-        printf_method_list(selected_class)
-        puts 'Please enter the method you wish to view:'
-        method_choice = gets.strip
-      else
-        puts "Hmmmm... I couldn't make sense of your input.  Let's try this" if first_choice != ''
-        printf_class_list
-        puts 'Please enter the name of the class for which you wish to view available methods:'
-        class_choice= gets.strip
-        selected_class = set_class(class_choice)
-        printf_method_list(selected_class)
-        puts 'Please enter the method you wish to view:'
-        method_choice = gets.strip
-      end
-          display_method(selected_class, method_choice)
+      self.make_classes
+      Scraper.store_offline
+      Classy.create_methods_for_all_classes
+      self.welcome_text
+      self.identify_and_render_class_and_method
+    end
+
+
+
+
+  def identify_and_render_class_and_method
+    first_choice = gets.strip.capitalize
+    if validate_choice_input(first_choice) == { "valid class" => true, "valid method" => true, "inputs" => 2}
+      class_choice = first_choice.split(',')[0].strip
+      selected_class = set_class(class_choice)
+      method_choice = first_choice.split(',')[1].strip
+    elsif validate_choice_input(first_choice) == { "valid class" => true, "valid method" => false, "inputs" => 1}
+      selected_class = set_class(first_choice)
+      printf_method_list(selected_class)
+      puts 'Please enter the method you wish to view:'
+      method_choice = gets.strip
+    elsif validate_choice_input(first_choice) == { "valid class" => true, "valid method" => false, "inputs" => 2}
+      selected_class = set_class(first_choice.split(',')[0].strip)
+      printf_method_list(selected_class)
+      puts 'Please enter the method you wish to view:'
+      method_choice = gets.strip
+    else
+      puts "Hmmmm... I couldn't make sense of your input.  Let's try this" if first_choice != ''
+      printf_class_list
+      puts 'Please enter the name of the class for which you wish to view available methods:'
+      class_choice= gets.strip
+      selected_class = set_class(class_choice)
+      printf_method_list(selected_class)
+      puts 'Please enter the method you wish to view:'
+      method_choice = gets.strip
+    end
+        display_method(selected_class, method_choice)
 
   end
 
+
+
+
+
+
   #return a hash that identifies whether the user provided class and method are valid.
-  def validate_first_choice_input(string)
+  def validate_choice_input(string)
     inputs = { "valid class" => false, "valid method" => false, "inputs" => 0 }
     if set_class(string)
       inputs["valid class"] = true
@@ -58,21 +70,22 @@ class CommandLineInteface
     inputs
   end
 
-  def width_check
-    puts 'This gem displays some pretty big lists.  To make sure your terminal window is wide enough expand the view until you have a continuous line on the right side'
-    5.times do
-      printf(" %80s \n", "|")
-    end
-  end
-
 
   def welcome_text
-    puts "Hello, welcome to what_dis_ruby?.  If you know the class AND method  OR just the class that you wish to look up please enter them as shown below:"
-    puts "Classy and Method: Classy, Method"
-    puts "Just Classy: Classy"
-    puts "Othwerwise, hit enter to see a list of available classes"
+    puts ''
+    puts "Please see below for possible actions:".colorize(:mode => :underline)
+    enter = bold_and_red("ENTER")
+    c_name = bold_and_red("Class_name")
+    m_name = bold_and_red("method_name")
+    puts "  For a list of all available classes: press #{enter}"
+    puts "  For a list of methods of a particular class: #{c_name}"
+    puts "  To see description and sample code for a specific class and method:"
+    puts "  #{c_name}, #{m_name}"
   end
 
+  def bold_and_red(string)
+    string.colorize(:mode => :bold, :color => :red)
+  end
 
 
   def set_method(class_instance, chosen_method_name)
@@ -112,9 +125,7 @@ class CommandLineInteface
 
 
   def make_classes
-    class_list = Scraper.scrape_class
-    Classy.create_from_collection(class_list)
-
+    Classy.create_from_collection(Scraper.scrape_class)
   end
 
 

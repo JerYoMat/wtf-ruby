@@ -1,5 +1,4 @@
 class Meth
-#one name, one or more uses, one or more sample_codes
   attr_accessor :name, :headings, :sample_code, :mini_description, :description, :parent
 
   def initialize(name, headings, description, mini_description, sample_code, parent)
@@ -7,7 +6,7 @@ class Meth
      self.headings = headings
      self. description = description
      self.mini_description = mini_description
-     self.sample_code = sample_code 
+     self.sample_code = sample_code
   end
 
 
