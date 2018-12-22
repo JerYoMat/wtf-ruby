@@ -14,7 +14,6 @@ class CommandLineInteface
 
     def run
     make_classes
-    width_check
     Scraper.store_offline
     Classy.create_methods_for_all_classes
 
@@ -44,7 +43,6 @@ class CommandLineInteface
         printf_method_list(selected_class)
         puts 'Please enter the method you wish to view:'
         method_choice = gets.strip
-
       end
           display_method(selected_class, method_choice)
   end
@@ -98,13 +96,13 @@ class CommandLineInteface
   def display_method(class_instance, chosen_method_name)
       m_to_show = set_method(class_instance, chosen_method_name)
       puts ''
-      puts '  Classy: ' + class_instance.name.colorize(:mode => :bold) + ' Method: ' + m_to_show.name.colorize(:color => :red, :mode => :bold)
+      puts '  Class: ' + class_instance.name.colorize(:mode => :bold) + ' Method: ' + m_to_show.name.colorize(:color => :red, :mode => :bold)
       printf("\t %s \n", m_to_show.mini_description.colorize(:mode => :italic))
       m_to_show.headings.each do |heading|
        printf("\t#{heading.colorize(:light_blue)}\n")
       end
       m_to_show.sample_code.each do |code|
-          line = code.colorize(:color => :white, :background => :green)
+          line = code.colorize(:color => :white)
           printf("\t %-50s \n", line)
       end
   end
