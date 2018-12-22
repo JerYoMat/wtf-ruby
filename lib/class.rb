@@ -1,6 +1,7 @@
 
+require 'open-uri'
 
-class Class
+class Classy
 
   attr_accessor :name, :methods, :content
 
@@ -16,16 +17,16 @@ class Class
   end
 
   def self.create_from_collection(list_of_classes)
+
     list_of_classes.each do |class_name|
-      if !class_name.include?("::") && !class_name.include?("Error") && !class_name.include?("System")
-        Class.new(class_name)
-      end
+        t = Classy.new(class_name)
+
     end
   end
 
   def self.create_methods_for_all_classes
     self.all.each do |ind_class|
-      ind_class.create_methods_for_instance_of_class
+        ind_class.create_methods_for_instance_of_class
     end
   end
 

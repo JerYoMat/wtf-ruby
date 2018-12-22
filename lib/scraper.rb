@@ -3,15 +3,19 @@ require 'pry'
 require 'nokogiri'
 class Scraper
 
-      @@core_path = "./fixtures/ruby-doc-site/core-2_3_1"
-      @@file_type = ".xml"
+      @@core_path = "https://ruby-doc.org/core-2.3.1"
+      @@file_type = ".html"
 
   def self.scrape_class
   class_names = []
-    core_link = @@core_path + @@file_type
+
+    core_link = @@core_path
     core_page = Nokogiri::HTML(open(core_link))
       core_page.xpath("//div [@id='class-index']/div[2]/p/a").each do |class_name|
-        class_names << class_name.text
+        if !class_name.children.text.include?("::") && !class_name.children.text.include?("Error") && !class_name.children.text.include?("System")
+          class_names << class_name.text
+
+        end
     end
     class_names
   end
