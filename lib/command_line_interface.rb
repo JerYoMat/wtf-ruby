@@ -1,23 +1,12 @@
-require_relative "../lib/scraper.rb"
-require_relative "../lib/class.rb"
-require_relative "../lib/meth.rb"
-require 'nokogiri'
-require 'colorize'
-require 'pry'
-require 'open-uri'
-require 'fileutils'
+require_relative '../config/environment.rb'
 
 
 class CommandLineInteface
-
-
 
     def run
     make_classes
     Scraper.store_offline
     Classy.create_methods_for_all_classes
-
-
       welcome_text
       first_choice = gets.strip
       if validate_first_choice_input(first_choice) == { "valid class" => true, "valid method" => true, "inputs" => 2}
@@ -45,6 +34,7 @@ class CommandLineInteface
         method_choice = gets.strip
       end
           display_method(selected_class, method_choice)
+
   end
 
   #return a hash that identifies whether the user provided class and method are valid.

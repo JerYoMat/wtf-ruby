@@ -1,14 +1,12 @@
-
-require 'open-uri'
-
 class Classy
 
-  attr_accessor :name, :methods, :content
+  attr_accessor :name, :methods
 
   @@all = []
 
   def initialize(name)
     @name = name
+    @methods = []
     @@all << self
   end
 
@@ -17,10 +15,8 @@ class Classy
   end
 
   def self.create_from_collection(list_of_classes)
-
     list_of_classes.each do |class_name|
-        t = Classy.new(class_name)
-
+        Classy.new(class_name)
     end
   end
 
@@ -35,10 +31,9 @@ class Classy
      method_names = Scraper.scrape_methods(@name)
      method_contents = Scraper.scrape_method_content_from_class_page(@name)
      index_placeholder = 0
-     @methods = []
      method_contents.each do |content|
       new_method = Meth.new(method_names[index_placeholder], content[:headings].split('click to toggle source'), content[:full_description], content[:mini_description], content[:code], self)
-       @methods << new_method
+       self.methods << new_method
        index_placeholder += 1
     end
   end
