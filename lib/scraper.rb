@@ -92,8 +92,6 @@ class Scraper
         FileUtils.mkdir_p(dir_three)
       end
 
-
-
       core_file = File.new("./fixtures/ruby-doc-site/core-2_3_1.xml", 'w')
       home = open("https://ruby-doc.org/core-2.3.1")
       doc_home = Nokogiri::HTML(home)
@@ -109,7 +107,6 @@ class Scraper
         t.write(doc)
         t.close
       end
-    else
     end
   end
 

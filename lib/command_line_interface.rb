@@ -12,9 +12,9 @@ class CommandLineInteface
 
     def run
     make_classes
+    width_check
     Scraper.store_offline
-
-      Classy.create_methods_for_all_classes
+    Classy.create_methods_for_all_classes
 
 
       welcome_text
@@ -71,7 +71,12 @@ class CommandLineInteface
     inputs
   end
 
-
+  def width_check
+    puts 'This gem displays some pretty big lists.  To make sure your terminal window is wide enough expand the view until you have a continuous line on the right side'
+    5.times do
+      printf(" %80s \n", "|")
+    end
+  end
 
 
   def welcome_text
