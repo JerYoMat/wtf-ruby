@@ -5,14 +5,18 @@ require 'nokogiri'
 require 'colorize'
 require 'pry'
 require 'open-uri'
+require 'fileutils'
 class CommandLineInteface
 
 
 
     def run
-      make_classes
+    make_classes
+    Scraper.store_offline
+
       Classy.create_methods_for_all_classes
-      Scraper.store_offline
+
+
       welcome_text
       first_choice = gets.strip
       if validate_first_choice_input(first_choice) == { "valid class" => true, "valid method" => true, "inputs" => 2}

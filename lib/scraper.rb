@@ -5,17 +5,39 @@ require 'fileutils'
 
 
 
-
-
 class Scraper
+  @@local_status = false
 
+  @@dir_two = File.dirname("./fixtures/ruby-doc-site")
+  if File.directory?(@@dir_two)
+    @@core_path = "./fixtures/ruby-doc-site"
+    @@file_type = ".xml"
+    @@local_status = true
+
+  else
       @@core_path = "https://ruby-doc.org/core-2.3.1"
       @@file_type = ".html"
-      @@insert = ''
+      @@local_status = false
+
+  end
+
+  def self.local_status
+    @@local_status
+  end
+
+
+
+
+
+
   def self.scrape_class
   class_names = []
+    if @@local_status == true
+      core_link = "#{@@core_path}/core-2_3_1.xml"
+    else
+      core_link = @@core_path
+    end
 
-    core_link = @@core_path
     core_page = Nokogiri::HTML(open(core_link))
       core_page.xpath("//div [@id='class-index']/div[2]/p/a").each do |class_name|
         if !class_name.children.text.include?("::") && !class_name.children.text.include?("Error") && !class_name.children.text.include?("System")
@@ -54,20 +76,40 @@ class Scraper
   end
 
   def self.store_offline  #Only run after making all the classes
+   if @@local_status == false
+      dir_one = File.dirname("./fixtures")
+      unless File.directory?(dir_one)
+        FileUtils.mkdir_p(dir_one)
+      end
+
+      dir_two = File.dirname("./fixtures/ruby-doc-site")
+      unless File.directory?(dir_two)
+        FileUtils.mkdir_p(dir_two)
+      end
+
+      dir_three = File.dirname("./fixtures/ruby-doc-site/why")
+      unless File.directory?(dir_three)
+        FileUtils.mkdir_p(dir_three)
+      end
 
 
-    core_file = File.new("./fixtures/ruby-doc-site/core-2_3_1.xml", 'w')
-    home = open("https://ruby-doc.org/core-2.3.1")
-    doc_home = Nokogiri::HTML(home)
-    core_file.write(doc_home)
-    core_file.close
-    Classy.all.each do |ind_class|
-      name = ind_class.name
-      t = File.new("./fixtures/ruby-doc-site/core-2_3_1/#{name}.xml", 'w')
-      html = open("https://ruby-doc.org/core-2.3.1/#{name}.html")
-      doc = Nokogiri::HTML(html)
-      t.write(doc)
-      t.close
+
+      core_file = File.new("./fixtures/ruby-doc-site/core-2_3_1.xml", 'w')
+      home = open("https://ruby-doc.org/core-2.3.1")
+      doc_home = Nokogiri::HTML(home)
+      core_file.write(doc_home)
+      core_file.close
+
+
+      Classy.all.each do |ind_class|
+        name = ind_class.name
+        t = File.new("./fixtures/ruby-doc-site/#{name}.xml", 'w')
+        html = open("https://ruby-doc.org/core-2.3.1/#{name}.html")
+        doc = Nokogiri::HTML(html)
+        t.write(doc)
+        t.close
+      end
+    else
     end
   end
 
