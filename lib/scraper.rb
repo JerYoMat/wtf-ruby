@@ -1,11 +1,17 @@
 require 'open-uri'
 require 'pry'
 require 'nokogiri'
+require 'fileutils'
+
+
+
+
+
 class Scraper
 
       @@core_path = "https://ruby-doc.org/core-2.3.1"
       @@file_type = ".html"
-
+      @@insert = ''
   def self.scrape_class
   class_names = []
 
@@ -45,6 +51,24 @@ class Scraper
           methods << method_hash
      end
     methods
+  end
+
+  def self.store_offline  #Only run after making all the classes
+
+
+    core_file = File.new("./fixtures/ruby-doc-site/core-2_3_1.xml", 'w')
+    home = open("https://ruby-doc.org/core-2.3.1")
+    doc_home = Nokogiri::HTML(home)
+    core_file.write(doc_home)
+    core_file.close
+    Classy.all.each do |ind_class|
+      name = ind_class.name
+      t = File.new("./fixtures/ruby-doc-site/core-2_3_1/#{name}.xml", 'w')
+      html = open("https://ruby-doc.org/core-2.3.1/#{name}.html")
+      doc = Nokogiri::HTML(html)
+      t.write(doc)
+      t.close
+    end
   end
 
 end
