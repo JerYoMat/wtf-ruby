@@ -6,6 +6,8 @@ require 'colorize'
 require 'pry'
 require 'open-uri'
 require 'fileutils'
+
+
 class CommandLineInteface
 
 
@@ -23,19 +25,16 @@ class CommandLineInteface
         class_choice = first_choice.split(',')[0].strip
         selected_class = set_class(class_choice)
         method_choice = first_choice.split(',')[1].strip
-        display_method(selected_class, method_choice)
       elsif validate_first_choice_input(first_choice) == { "valid class" => true, "valid method" => false, "inputs" => 1}
         selected_class = set_class(first_choice)
         printf_method_list(selected_class)
         puts 'Please enter the method you wish to view:'
         method_choice = gets.strip
-        display_method(selected_class, method_choice)
       elsif validate_first_choice_input(first_choice) == { "valid class" => true, "valid method" => false, "inputs" => 2}
         selected_class = set_class(first_choice.split(',')[0].strip)
         printf_method_list(selected_class)
         puts 'Please enter the method you wish to view:'
         method_choice = gets.strip
-        display_method(selected_class, method_choice)
       else
         puts "Hmmmm... I couldn't make sense of your input.  Let's try this" if first_choice != ''
         printf_class_list
@@ -45,9 +44,9 @@ class CommandLineInteface
         printf_method_list(selected_class)
         puts 'Please enter the method you wish to view:'
         method_choice = gets.strip
-        display_method(selected_class, method_choice)
 
       end
+          display_method(selected_class, method_choice)
   end
 
   #return a hash that identifies whether the user provided class and method are valid.

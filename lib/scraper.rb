@@ -7,19 +7,20 @@ require 'fileutils'
 
 class Scraper
   @@local_status = false
-
   @@dir_two = File.dirname("./fixtures/ruby-doc-site")
+
+#Sets the path for scraping based on the presence of the fixtures directory
   if File.directory?(@@dir_two)
     @@core_path = "./fixtures/ruby-doc-site"
     @@file_type = ".xml"
     @@local_status = true
-
   else
       @@core_path = "https://ruby-doc.org/core-2.3.1"
       @@file_type = ".html"
       @@local_status = false
 
   end
+
 
   def self.local_status
     @@local_status
