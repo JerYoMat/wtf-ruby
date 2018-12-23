@@ -4,25 +4,32 @@ require_relative '../config/environment.rb'
 class CommandLineInteface
    attr_accessor :current_class
 
+
+
+
+
+
     def run
       #setup
       make_classes
       Scraper.store_offline
+
       Classy.create_methods_for_all_classes
       #collect first round of user input
+
       puts ''
       puts "Please see below for possible actions:".colorize(:mode => :underline)
       prompt_text
-      first_choice = gets.strip.capitalize
+      first_choice = gets.strip
       identify_and_render_class_and_method(first_choice)
       user_input = ''
       puts '\n \n'
-      
+
       puts "Enter " + bold_and_red("exit") + " to quit the application."
 
       until user_input == 'Exit'
         prompt_text
-        user_input = gets.strip.capitalize
+        user_input = gets.strip
         identify_and_render_class_and_method(user_input) if user_input != 'Exit'
       end
 
@@ -107,7 +114,7 @@ class CommandLineInteface
 
 
   def set_method(class_instance, chosen_method_name)
-    class_instance.methods.select { |m| m.name == chosen_method_name}.first
+    class_instance.meth_ods.select { |m| m.name == chosen_method_name}.first
   end
 
   def make_classes
@@ -122,6 +129,7 @@ class CommandLineInteface
 
 
   def display_method(class_instance, chosen_method_name)
+
       m_to_show = set_method(class_instance, chosen_method_name)
       puts ''
       puts '  Class: ' + class_instance.name.colorize(:mode => :bold) + ' Method: ' + m_to_show.name.colorize(:color => :red, :mode => :bold)
@@ -140,12 +148,12 @@ class CommandLineInteface
 
   def printf_method_list(selected_class)
     counter = 0
-    rows = selected_class.methods.count/3
+    rows = selected_class.meth_ods.count/3
     rows.ceil.times do
       printf(" %2d.%-25s %2d.%-25s %2d.%-25s \n",
-        counter += 1, selected_class.methods[counter - 1].name,
-        counter += 1, selected_class.methods[counter - 1].name,
-        counter += 1, selected_class.methods[counter - 1].name)
+        counter += 1, selected_class.meth_ods[counter - 1].name,
+        counter += 1, selected_class.meth_ods[counter - 1].name,
+        counter += 1, selected_class.meth_ods[counter - 1].name)
     end
   end
 

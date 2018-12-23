@@ -41,9 +41,8 @@ class Scraper
 
     core_page = Nokogiri::HTML(open(core_link))
       core_page.xpath("//div [@id='class-index']/div[2]/p/a").each do |class_name|
-        if !class_name.children.text.include?("::") && !class_name.children.text.include?("Error") && !class_name.children.text.include?("System")
+        if !class_name.children.text.include?("::")
           class_names << class_name.text
-
         end
     end
     class_names
@@ -62,7 +61,7 @@ class Scraper
     end
 
   def self.scrape_method_content_from_class_page(class_name)
-   methods = []
+   meth_ods = []
    method_link = @@core_path+"/#{class_name}#{@@file_type}"
    method_page = Nokogiri::HTML(open(method_link))
      method_page.css(".method-detail").each do |section|
@@ -71,9 +70,9 @@ class Scraper
           method_hash[:mini_description] = section.xpath("div / p[1]").text.split("\n").join(' ')
           method_hash[:full_description] = section.xpath("div / p").text
           method_hash[:code] = section.css(".ruby").text.split("\n")
-          methods << method_hash
+          meth_ods << method_hash
      end
-    methods
+    meth_ods
   end
 
   def self.store_offline  #Only run after making all the classes

@@ -1,12 +1,12 @@
 class Classy
 
-  attr_accessor :name, :methods
+  attr_accessor :name, :meth_ods
 
   @@all = []
 
   def initialize(name)
     @name = name
-    @methods = []
+    @meth_ods = []
     @@all << self
   end
 
@@ -21,19 +21,23 @@ class Classy
   end
 
   def self.create_methods_for_all_classes
+
     self.all.each do |ind_class|
+
         ind_class.create_methods_for_instance_of_class
     end
   end
 
 
   def create_methods_for_instance_of_class
+
      method_names = Scraper.scrape_methods(@name)
      method_contents = Scraper.scrape_method_content_from_class_page(@name)
      index_placeholder = 0
      method_contents.each do |content|
+
       new_method = Meth.new(method_names[index_placeholder], content[:headings].split('click to toggle source'), content[:full_description], content[:mini_description], content[:code], self)
-       self.methods << new_method
+       self.meth_ods << new_method
        index_placeholder += 1
     end
   end
