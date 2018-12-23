@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/command_line_interface.rb"
+
+# http://127.0.0.1:4000/
+puts 'Enter class and method'
+user_input = gets.strip
+CommandLineInteface.new.run_w_args(user_input)

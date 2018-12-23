@@ -4,13 +4,17 @@ require_relative '../config/environment.rb'
 class CommandLineInteface
    attr_accessor :current_class
 
+    def run_w_args(string)
+
+    end
+
 
     def run
       #setup
       make_classes
       Scraper.store_offline
       Classy.create_methods_for_all_classes
-      Classy.remove_empties
+
       #collect first round of user input
       puts ''
       puts "Please see below for possible actions:".colorize(:mode => :underline)
@@ -130,6 +134,8 @@ class CommandLineInteface
           line = code.colorize(:color => :white)
           printf("\t %-50s \n", line)
       end
+      puts ''
+      puts "Source: #{class_instance.source}"
   end
 
 
@@ -164,7 +170,7 @@ class CommandLineInteface
 
 
     def bold_and_red(string)
-      string.colorize(:mode => :bold, :color => :red)
+      string.colorize(:mode => :bold, :color => :green)
     end
 
 
