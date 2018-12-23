@@ -2,32 +2,56 @@ require_relative '../config/environment.rb'
 
 
 class CommandLineInteface
+   attr_accessor :current_class
 
     def run
-      self.make_classes
+      #setup
+      make_classes
       Scraper.store_offline
       Classy.create_methods_for_all_classes
-      self.welcome_text
-      self.identify_and_render_class_and_method
+      #collect first round of user input
+      puts ''
+      puts "Please see below for possible actions:".colorize(:mode => :underline)
+      prompt_text
+      first_choice = gets.strip.capitalize
+      identify_and_render_class_and_method(first_choice)
+      user_input = ''
+      puts '\n \n'
+      
+      puts "Enter " + bold_and_red("exit") + " to quit the application."
+
+      until user_input == 'Exit'
+        prompt_text
+        user_input = gets.strip.capitalize
+        identify_and_render_class_and_method(user_input) if user_input != 'Exit'
+      end
+
+    end
+
+
+    def going_again(user_input)
+      more = "more".bold_and_red
+      puts "For additional information enter #{more}"
+      prompt_text
     end
 
 
 
 
-  def identify_and_render_class_and_method
-    first_choice = gets.strip.capitalize
+  def identify_and_render_class_and_method(first_choice)
+
     if validate_choice_input(first_choice) == { "valid class" => true, "valid method" => true, "inputs" => 2}
       class_choice = first_choice.split(',')[0].strip
-      selected_class = set_class(class_choice)
+      @current_class = set_class(class_choice)
       method_choice = first_choice.split(',')[1].strip
     elsif validate_choice_input(first_choice) == { "valid class" => true, "valid method" => false, "inputs" => 1}
-      selected_class = set_class(first_choice)
-      printf_method_list(selected_class)
+      @current_class = set_class(first_choice)
+      printf_method_list(@current_class)
       puts 'Please enter the method you wish to view:'
       method_choice = gets.strip
     elsif validate_choice_input(first_choice) == { "valid class" => true, "valid method" => false, "inputs" => 2}
-      selected_class = set_class(first_choice.split(',')[0].strip)
-      printf_method_list(selected_class)
+      @current_class = set_class(first_choice.split(',')[0].strip)
+      printf_method_list(@current_class)
       puts 'Please enter the method you wish to view:'
       method_choice = gets.strip
     else
@@ -35,17 +59,14 @@ class CommandLineInteface
       printf_class_list
       puts 'Please enter the name of the class for which you wish to view available methods:'
       class_choice= gets.strip
-      selected_class = set_class(class_choice)
-      printf_method_list(selected_class)
+      @current_class = set_class(class_choice)
+      printf_method_list(@current_class)
       puts 'Please enter the method you wish to view:'
       method_choice = gets.strip
     end
-        display_method(selected_class, method_choice)
+        display_method(@current_class, method_choice)
 
   end
-
-
-
 
 
 
@@ -71,10 +92,8 @@ class CommandLineInteface
   end
 
 
-  def welcome_text
-    puts ''
-    puts "Please see below for possible actions:".colorize(:mode => :underline)
-    enter = bold_and_red("ENTER")
+  def prompt_text
+      enter = bold_and_red("ENTER")
     c_name = bold_and_red("Class_name")
     m_name = bold_and_red("method_name")
     puts "  For a list of all available classes: press #{enter}"
@@ -83,18 +102,24 @@ class CommandLineInteface
     puts "  #{c_name}, #{m_name}"
   end
 
-  def bold_and_red(string)
-    string.colorize(:mode => :bold, :color => :red)
-  end
+
+
 
 
   def set_method(class_instance, chosen_method_name)
     class_instance.methods.select { |m| m.name == chosen_method_name}.first
   end
 
+  def make_classes
+    Classy.create_from_collection(Scraper.scrape_class)
+  end
+
   def set_class(string)
     Classy.all.select { |c| c.name == string}.first
   end
+
+
+
 
   def display_method(class_instance, chosen_method_name)
       m_to_show = set_method(class_instance, chosen_method_name)
@@ -111,6 +136,8 @@ class CommandLineInteface
   end
 
 
+#Printing Lists to terminal and styling
+
   def printf_method_list(selected_class)
     counter = 0
     rows = selected_class.methods.count/3
@@ -124,10 +151,6 @@ class CommandLineInteface
 
 
 
-  def make_classes
-    Classy.create_from_collection(Scraper.scrape_class)
-  end
-
 
   def printf_class_list
     counter = 0
@@ -140,5 +163,11 @@ class CommandLineInteface
         counter += 1, Classy.all[counter - 1].name)
     end
   end
+
+
+    def bold_and_red(string)
+      string.colorize(:mode => :bold, :color => :red)
+    end
+
 
 end
