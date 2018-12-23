@@ -3,6 +3,7 @@ class Classy
   attr_accessor :name, :meth_ods
 
   @@all = []
+  @@empties = []
 
   def initialize(name)
     @name = name
@@ -12,6 +13,10 @@ class Classy
 
   def self.all
     @@all
+  end
+
+  def self.empties
+    @@empties
   end
 
   def self.create_from_collection(list_of_classes)
@@ -40,6 +45,16 @@ class Classy
        self.meth_ods << new_method
        index_placeholder += 1
     end
+    if self.meth_ods == []
+      @@empties << self.name
+    end
+  end
+
+  def self.remove_empties
+    Classy.all.delete_if do |c|
+       @@empties.include?(c.name)
+    end
+    Classy.all
   end
 
 end

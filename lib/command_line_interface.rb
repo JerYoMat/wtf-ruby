@@ -9,10 +9,9 @@ class CommandLineInteface
       #setup
       make_classes
       Scraper.store_offline
-
       Classy.create_methods_for_all_classes
+      Classy.remove_empties
       #collect first round of user input
-
       puts ''
       puts "Please see below for possible actions:".colorize(:mode => :underline)
       prompt_text
@@ -21,10 +20,9 @@ class CommandLineInteface
       user_input = ''
       puts ''
       puts ''
-
       puts "Enter " + bold_and_red("exit") + " to quit the application."
-
       until user_input == 'exit'
+        puts ''
         prompt_text
         user_input = gets.strip
         identify_and_render_class_and_method(user_input) if user_input != 'exit'
@@ -32,12 +30,6 @@ class CommandLineInteface
 
     end
 
-
-    def going_again(user_input)
-      more = "more".bold_and_red
-      puts "For additional information enter #{more}"
-      prompt_text
-    end
 
 
 
