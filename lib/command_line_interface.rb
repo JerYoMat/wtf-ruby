@@ -5,10 +5,6 @@ class CommandLineInteface
    attr_accessor :current_class
 
 
-
-
-
-
     def run
       #setup
       make_classes
@@ -20,17 +16,18 @@ class CommandLineInteface
       puts ''
       puts "Please see below for possible actions:".colorize(:mode => :underline)
       prompt_text
-      first_choice = gets.strip
-      identify_and_render_class_and_method(first_choice)
+      user_string = gets.strip
+      identify_and_render_class_and_method(user_string)
       user_input = ''
-      puts '\n \n'
+      puts ''
+      puts ''
 
       puts "Enter " + bold_and_red("exit") + " to quit the application."
 
-      until user_input == 'Exit'
+      until user_input == 'exit'
         prompt_text
         user_input = gets.strip
-        identify_and_render_class_and_method(user_input) if user_input != 'Exit'
+        identify_and_render_class_and_method(user_input) if user_input != 'exit'
       end
 
     end
@@ -148,6 +145,7 @@ class CommandLineInteface
 
   def printf_method_list(selected_class)
     counter = 0
+
     rows = selected_class.meth_ods.count/3
     rows.ceil.times do
       printf(" %2d.%-25s %2d.%-25s %2d.%-25s \n",
@@ -164,7 +162,7 @@ class CommandLineInteface
     counter = 0
     rows = Classy.all.count/4
     rows.ceil.times do
-      printf(" %2d.%-15s %2d.%-15s %2d.%-15s %2d.%-15s \n",
+      printf(" %2d.%-22s %2d.%-22s %2d.%-22s %2d.%-22s \n",
         counter += 1, Classy.all[counter - 1].name,
         counter += 1, Classy.all[counter - 1].name,
         counter += 1, Classy.all[counter - 1].name,
