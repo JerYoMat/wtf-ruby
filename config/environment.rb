@@ -5,7 +5,7 @@ require 'open-uri'
 require 'fileutils'
 
 
-require_relative "../lib/scraper.rb"
-require_relative "../lib/class.rb"
-require_relative "../lib/meth.rb"
-require_relative "../lib/command_line_interface.rb"
+require_relative "../lib/wtf/scraper"
+require_relative "../lib/wtf/class"
+require_relative "../lib/wtf/meth"
+require_relative "../lib/wtf/cli"
