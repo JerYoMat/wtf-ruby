@@ -94,7 +94,7 @@
         core_file.close
 
 
-        Classy.all.each do |ind_class|
+        Wtf::Classy.all.each do |ind_class|
           name = ind_class.name
           t = File.new("./fixtures/ruby-doc-site/#{name}.xml", 'w')
           html = open("https://ruby-doc.org/core-2.3.1/#{name}.html")
