@@ -2,55 +2,70 @@ require_relative '../config/environment.rb'
 
 
 class CommandLineInteface
-   attr_accessor :current_class, :current_method
+   attr_accessor :current_class, :current_method, :user_input
 
-
+    def initialize
+      @user_input = ' '
+    end
 
     def run
       #setup
-      make_classes
-      Scraper.store_offline
-      Classy.create_methods_for_all_classes
-      puts ''
+      base_setup
       puts "Please see below for possible actions:".colorize(:mode => :underline)
-      prompt_text
-      validate_choice_input(gets.strip)
-      binding.pry 
+      until @user_input.downcase == 'exit'
+
+
+        prompt_text
+        @user_input = gets.strip
+        validate_choice_input(@user_input) unless @user_input == ''
+
+        if @current_class == nil && @user_input != "exit"
+          @user_input = ' '
+          until @current_class != nil
+            printf_class_list
+            @user_input = gets.strip
+            validate_choice_input(@user_input)
+          end
+        end
+        if @current_class && @current_class.has_methods? && @current_method == nil
+          @user_input = ''
+          until @current_method != nil
+            puts ''
+            printf_method_list(@current_class)
+            puts 'Enter the name of the method or exit to quit'
+            @user_input = gets.strip
+            @current_method = set_method(@current_class,@user_input) if set_method(@current_class,@user_input)
+          end
+        elsif @current_class && !@current_class.has_methods?
+          3.times do
+            printf("\n")
+          end
+          printf("\t%s does not have any methods.\n".colorize(:color => :cyan), @current_class.colorize(:color => :red))
+          printf("\tPlease hold ctrl and click the below link for additional information.\n")
+          printf("\t#{@current_class.source.colorize(:mode => :bold)}\n")
+          3.times do
+            printf("\n")
+          end
+        end
+          if @current_class && @current_class.has_methods? && !@current_method.nil?
+            display_method(@current_class, @current_method)
+            sleep(4)
+          end
+        @current_class = nil
+        @current_method = nil
+
+    end
     end
 
 
 
-
-
-  def identify_and_render_class_and_method(first_choice)
-
-    if validate_choice_input(first_choice) == { "valid class" => true, "valid method" => true, "inputs" => 2}
-      class_choice = first_choice.split(',')[0].strip
-      @current_class = set_class(class_choice)
-      method_choice = first_choice.split(',')[1].strip
-    elsif validate_choice_input(first_choice) == { "valid class" => true, "valid method" => false, "inputs" => 1}
-      @current_class = set_class(first_choice)
-      printf_method_list(@current_class)
-      puts 'Please enter the method you wish to view:'
-      method_choice = gets.strip
-    elsif validate_choice_input(first_choice) == { "valid class" => true, "valid method" => false, "inputs" => 2}
-      @current_class = set_class(first_choice.split(',')[0].strip)
-      printf_method_list(@current_class)
-      puts 'Please enter the method you wish to view:'
-      method_choice = gets.strip
-    else
-      puts "Hmmmm... I couldn't make sense of your input.  Let's try this" if first_choice != ''
-      printf_class_list
-      puts 'Please enter the name of the class for which you wish to view available methods:'
-      class_choice= gets.strip
-      @current_class = set_class(class_choice)
-      printf_method_list(@current_class)
-      puts 'Please enter the method you wish to view:'
-      method_choice = gets.strip
-    end
-        display_method(@current_class, method_choice)
-
+  def base_setup
+    make_classes
+    Scraper.store_offline
+    Classy.create_methods_for_all_classes
   end
+
+
 
 
 
@@ -72,12 +87,11 @@ class CommandLineInteface
       if user_inputs.count == 2 && set_method(@current_class, user_inputs[1])
         @current_method = set_method(@current_class, user_inputs[1])
       end
-    else
-      puts 'Sorry, looks like you have entered invalid parameters'
-      prompt_text
-    end
 
+    end
   end
+
+
 
 
   def prompt_text
@@ -109,9 +123,9 @@ class CommandLineInteface
 
 
 
-  def display_method(class_instance, chosen_method_name)
+  def display_method(class_instance, chosen_method)
 
-      m_to_show = set_method(class_instance, chosen_method_name)
+      m_to_show = set_method(class_instance, chosen_method.name)
       puts ''
       puts '  Class: ' + class_instance.name.colorize(:mode => :bold) + ' Method: ' + m_to_show.name.colorize(:color => :red, :mode => :bold)
       printf("\t %s \n", m_to_show.mini_description.colorize(:mode => :italic))
@@ -132,13 +146,18 @@ class CommandLineInteface
   def printf_method_list(selected_class)
 
         counter = 0
-      rows = selected_class.meth_ods.count/3
-      rows.ceil.times do
+      rows = selected_class.meth_ods.count.to_f / 3.00
+      remainder = selected_class.meth_ods.count % 3
+      rows.floor.times do
         printf(" %2d.%-25s %2d.%-25s %2d.%-25s \n",
           counter += 1, selected_class.meth_ods[counter - 1].name,
           counter += 1, selected_class.meth_ods[counter - 1].name,
           counter += 1, selected_class.meth_ods[counter - 1].name)
       end
+      remainder.times do
+       printf(" %2d.%-25s", counter += 1, selected_class.meth_ods[counter - 1].name)
+      end
+      printf("\n")
 
   end
 
@@ -155,6 +174,7 @@ class CommandLineInteface
         counter += 1, Classy.all[counter - 1].name,
         counter += 1, Classy.all[counter - 1].name)
     end
+    puts "Type the name of the class to see available methods."
   end
 
 
