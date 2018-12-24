@@ -2,7 +2,7 @@ require_relative '../config/environment.rb'
 
 
 class CommandLineInteface
-   attr_accessor :current_class
+   attr_accessor :current_class, :current_method
 
     def run_w_args(string)
 
@@ -21,10 +21,11 @@ class CommandLineInteface
       prompt_text
       user_string = gets.strip
       identify_and_render_class_and_method(user_string)
-      user_input = ''
+
       puts ''
       puts ''
       puts "Enter " + bold_and_red("exit") + " to quit the application."
+      user_input = ''
       until user_input == 'exit'
         puts ''
         prompt_text
@@ -72,25 +73,20 @@ class CommandLineInteface
 
 
 
+#Reqs
+#If given a string, this method should determine whether the string name matches an individual class,
+#an individual class and method
+#If valid class is received then set the class
+#If valide method is received then set the method.
+  def split_inputs(str)
+    str.scan(/\w+/)
+  end
 
-  def validate_choice_input(string)
-    inputs = { "valid class" => false, "valid method" => false, "inputs" => 0 }
-    if set_class(string)
-      inputs["valid class"] = true
-      inputs["inputs"] = 1
-    elsif string.include?(',')
-      array = string.split(',')
-      pot_class = array[0].strip
-      pot_method = array[1].strip
-      inputs["inputs"] = array.count
-      if set_class(pot_class)
-        inputs["valid class"] = true
-        if set_method(set_class(pot_class), pot_method)
-          inputs["valid method"] = true
-        end
-      end
-    end
-    inputs
+  def validate_choice_input(str)
+    user_inputs = split_inputs(str)
+    @current_class = set_class(user_inputs[0])
+    @current_method = set_method(user_inputs[1]) if user_inputs[1].exist?
+
   end
 
 
@@ -109,7 +105,7 @@ class CommandLineInteface
 
 
   def set_method(class_instance, chosen_method_name)
-    class_instance.meth_ods.select { |m| m.name == chosen_method_name}.first
+    class_instance.meth_ods.select { |m| m.name == chosen_method_name.downcase}.first
   end
 
   def make_classes
@@ -117,7 +113,7 @@ class CommandLineInteface
   end
 
   def set_class(string)
-    Classy.all.select { |c| c.name == string}.first
+    Classy.all.select { |c| c.name.upcase == string.upcase}.first
   end
 
 
@@ -153,7 +149,7 @@ class CommandLineInteface
           counter += 1, selected_class.meth_ods[counter - 1].name,
           counter += 1, selected_class.meth_ods[counter - 1].name)
       end
-    
+
   end
 
 

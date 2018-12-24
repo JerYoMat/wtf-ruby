@@ -31,6 +31,10 @@ class Classy
     end
   end
 
+  def has_methods?
+    self.meth_ods == [] ? false : true
+  end
+
 
   def create_methods_for_instance_of_class
 
@@ -43,7 +47,7 @@ class Classy
        self.meth_ods << new_method
        index_placeholder += 1
     end
-    
+
   end
 
 
