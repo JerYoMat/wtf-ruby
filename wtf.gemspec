@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.date        = '2018-12-24'
   s.summary     = "Ruby-Doc Classes and Methods"
   s.description = "Provides details on ruby classes and their methods."
-  s.authors     = ["Jeremy Emata"]
+  s.authors     = ["JerYoMat"]
   s.email       = 'jeremy.emata@gmail.com'
   s.files       = ["lib/wtf.rb", "lib/wtf/cli.rb", "lib/wtf/scraper.rb", "lib/wtf/meth.rb", "lib/wtf/class.rb","config/environment.rb"]
   s.homepage    = 'http://rubygems.org/gems/wtf'
