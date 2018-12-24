@@ -4,9 +4,6 @@ require_relative '../config/environment.rb'
 class CommandLineInteface
    attr_accessor :current_class, :current_method
 
-    def run_w_args(string)
-
-    end
 
 
     def run
@@ -14,25 +11,11 @@ class CommandLineInteface
       make_classes
       Scraper.store_offline
       Classy.create_methods_for_all_classes
-
-      #collect first round of user input
       puts ''
       puts "Please see below for possible actions:".colorize(:mode => :underline)
       prompt_text
-      user_string = gets.strip
-      identify_and_render_class_and_method(user_string)
-
-      puts ''
-      puts ''
-      puts "Enter " + bold_and_red("exit") + " to quit the application."
-      user_input = ''
-      until user_input == 'exit'
-        puts ''
-        prompt_text
-        user_input = gets.strip
-        identify_and_render_class_and_method(user_input) if user_input != 'exit'
-      end
-
+      validate_choice_input(gets.strip)
+      binding.pry 
     end
 
 
@@ -78,14 +61,21 @@ class CommandLineInteface
 #an individual class and method
 #If valid class is received then set the class
 #If valide method is received then set the method.
-  def split_inputs(str)
+  def isolate_inputs(str)
     str.scan(/\w+/)
   end
 
   def validate_choice_input(str)
-    user_inputs = split_inputs(str)
-    @current_class = set_class(user_inputs[0])
-    @current_method = set_method(user_inputs[1]) if user_inputs[1].exist?
+    user_inputs = isolate_inputs(str)
+    if user_inputs.count <= 2 && set_class(user_inputs[0])
+      @current_class = set_class(user_inputs[0])
+      if user_inputs.count == 2 && set_method(@current_class, user_inputs[1])
+        @current_method = set_method(@current_class, user_inputs[1])
+      end
+    else
+      puts 'Sorry, looks like you have entered invalid parameters'
+      prompt_text
+    end
 
   end
 
