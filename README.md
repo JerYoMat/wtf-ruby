@@ -3,8 +3,7 @@
 This Ruby Gem provides a CLI to view the documentation for Ruby classes and methods found on Ruby-Docs.org.  
 
 ## Installation
-1.) Navigate to desired directory and type
-git clone https://github.com/JerYoMat/what_dis_ruby/
+1.) Navigate to desired directory and type ``git clone https://github.com/JerYoMat/what_dis_ruby/``
 
 2.) ``CD into directory``
 
