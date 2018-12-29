@@ -63,7 +63,7 @@
             method_hash = {}
             method_hash[:headings] =section.xpath("div [@class='method-heading'] / span").text
             method_hash[:mini_description] = section.xpath("div / p[1]").text.split("\n").join(' ')
-            method_hash[:full_description] = section.xpath("div / p").text
+            method_hash[:full_description] = section.xpath("div / p").text  #Not currently used
             method_hash[:code] = section.css(".ruby").text.split("\n")
             meth_ods << method_hash
        end
@@ -82,7 +82,7 @@
           FileUtils.mkdir_p(dir_two)
         end
 
-        dir_three = File.dirname("./fixtures/ruby-doc-site/why")
+        dir_three = File.dirname("./fixtures/ruby-doc-site/not_returned")
         unless File.directory?(dir_three)
           FileUtils.mkdir_p(dir_three)
         end

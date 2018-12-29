@@ -1,5 +1,4 @@
 
-
   class Wtf::CommandLineInteface
      attr_accessor :current_class, :current_method, :user_input
 
