@@ -1,5 +1,5 @@
 
-
+require 'pry'
   class Wtf::CommandLineInteface
      attr_accessor :current_class, :current_method, :user_input
 
@@ -17,11 +17,10 @@
           validate_choice_input(@user_input) unless @user_input == ''
     #User has not chosen a valid class through their first selection and should see a list of all classes
           if @current_class == nil && @user_input != "exit"
-            @user_input = ' '
             until @current_class != nil
               printf_class_list
               @user_input = gets.strip
-              validate_choice_input(@user_input)
+              validate_choice_input(@user_input) unless @user_input == ''
             end
           end
     #User has chosen a class but no method
@@ -36,7 +35,7 @@
             end
     #The selected class does not have methods.
           elsif @current_class && !@current_class.has_methods?
-             print_class_with_no_method_content
+              print_class_with_no_method_content
           end
     #User has selected a class and method
             if @current_class && @current_class.has_methods? && !@current_method.nil?
@@ -120,7 +119,7 @@
         puts '  Class: ' + class_instance.name.colorize(:mode => :bold) + ' Method: ' + m_to_show.name.colorize(:color => :red, :mode => :bold)
         printf("\t %s \n", m_to_show.mini_description.colorize(:mode => :italic))
         m_to_show.headings.each do |heading|
-         printf("\t#{heading.colorize(:light_blue)}\n")
+        printf("\t#{heading.colorize(:light_blue)}\n")
         end
         m_to_show.sample_code.each do |code|
             line = code.colorize(:color => :white)

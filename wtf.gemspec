@@ -14,10 +14,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
   s.executables << 'wtf'
 
-  s.add_development_dependency "bundler", "~> 1.10"
-  s.add_development_dependency "rake", "~> 10.0"
-  s.add_development_dependency "rspec", ">= 0"
-  s.add_development_dependency "nokogiri", ">= 0"
-  s.add_development_dependency "colorize", ">= 0"
-  s.add_development_dependency "pry", ">= 0"
+  s.add_runtime_dependency "bundler", "~> 1.10"
+  s.add_runtime_dependency "nokogiri", "~> 1.9.1"
+  s.add_runtime_dependency "colorize", "~> 0.8.1"
 end
