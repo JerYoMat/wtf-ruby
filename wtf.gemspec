@@ -10,7 +10,6 @@ Gem::Specification.new do |s|
   s.authors     = ["JerYoMat"]
   s.email       = 'jeremy.emata@gmail.com'
   s.files       = ["lib/wtf.rb", "lib/wtf/cli.rb", "lib/wtf/scraper.rb", "lib/wtf/meth.rb", "lib/wtf/class.rb","config/environment.rb"]
-  s.homepage    = 'http://rubygems.org/gems/wtf'
   s.license     = 'MIT'
   s.executables << 'wtf'
 

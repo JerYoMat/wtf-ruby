@@ -6,7 +6,7 @@ This Ruby Gem provides a CLI to view the documentation for Ruby classes and meth
 1.) Navigate to desired directory and type ``git clone https://github.com/JerYoMat/what_dis_ruby/``
 
 2.) ``cd`` into cloned directory.
-3.) Install gem by typing:``gem install wtf-0.1.0.gem ``
+3.) Install gem by typing:``gem install wtf-0.1.3.gem ``
 
 ## Usage
 
